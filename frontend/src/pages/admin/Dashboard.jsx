@@ -16,13 +16,14 @@ const Dashboard = () => {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <div className="flex flex-col flex-grow ">
+      <div className="flex flex-col flex-grow w-1/2 ">
         <Header />
         <div className="overflow-x-auto">
           <div className="gap-4 grid md:grid-cols-3 p-4">
             {/* left */}
             <div className="md:col-span-2">
               {/* Dashboard Cards */}
+
               <div className="grid md:grid-cols-3 gap-4 mb-4">
                 {/* Total Patients */}
                 <div className="bg-white rounded-lg shadow-sm flex justify-between items-center min-h-[100px]">
@@ -59,23 +60,21 @@ const Dashboard = () => {
               </div>
 
               {/* Patients Statistics with Graph */}
-              <div>
+              <div className="grid">
                 <StatisticsChart patientData={patientData} />
               </div>
             </div>
 
             {/* right */}
-            <div className="grid gap-4">
+            <div className="grid min-h-full">
               {/* Billing & Payments */}
               <div className="bg-white p-4 rounded-lg shadow overflow-auto  ">
-                {" "}
-                {/* Adjust max-height here */}
                 <BillingPayments />
               </div>
             </div>
           </div>
 
-          <div className="gap-4 grid md:grid-cols-3 overflow-x-auto p-4 h-100">
+          <div className="gap-2 grid md:grid-cols-3 overflow-x-auto p-4 ">
             <div className="md:col-span-2">
               {/* Today's Appointments List */}
               <div className="bg-white">

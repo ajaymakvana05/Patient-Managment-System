@@ -5,12 +5,12 @@ import DoctorManagementTable from "../../Components/DoctorManagementTable";
 
 const DoctorDashboard = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-y-auto">
       <Sidebar />
       <div className="flex flex-col flex-grow">
         <Header />
-        <div className="flex flex-col h-full">
-            <DoctorManagementTable/>
+        <div className="flex flex-col h-full overflow-x-auto container">
+          <DoctorManagementTable />
         </div>
       </div>
     </div>

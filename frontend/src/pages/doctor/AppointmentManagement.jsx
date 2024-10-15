@@ -8,7 +8,7 @@ const AppointmentManagement = () => {
   return (
     <div className="flex h-screen">
       <DoctorSidebar />
-      <div className="flex flex-col flex-grow ">
+      <div className="flex flex-col flex-grow w-1/2 ">
         <DoctorHeader />
         <div className="flex flex-col h-full overflow-y-auto">
           {/* <AppointmentTable /> */}

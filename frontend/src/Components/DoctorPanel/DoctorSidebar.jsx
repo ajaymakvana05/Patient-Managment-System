@@ -38,7 +38,7 @@ const DoctorSidebar = () => {
   };
 
   return (
-    <div className="flex md:min-[266px]">
+    <div className="flex md:min-[280px]">
       <div className="md:hidden">
         <button
           onClick={toggleSidebar}
@@ -75,7 +75,6 @@ const DoctorSidebar = () => {
           {/* Navigation */}
           <nav className="flex-1">
             <ul className="space-y-4">
-              {/* Other Navigation Items */}
               <li>
                 <NavLink
                   to="/appointmentmanagement/appointmenttable"
@@ -115,7 +114,7 @@ const DoctorSidebar = () => {
               {/* Prescription Tools with Dropdowns */}
               <li>
                 <NavLink
-                  to="/prescriptionTools/appointments"
+                  to="/prescriptiontools/appointments"
                   onClick={togglePrescriptionDropdown}
                   className="flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 text-gray hover:text-[#0EABEB] hover:bg-[#b6dceb] w-full"
                 >
@@ -134,7 +133,7 @@ const DoctorSidebar = () => {
                   <ul className="ml-8 space-y-2">
                     <li>
                       <NavLink
-                        to="/prescriptiontools/subtool1/item1"
+                        to="/prescriptiontools/patientdetails"
                         className={({ isActive }) =>
                           `block px-4 py-2 rounded-md transition-colors duration-300 ${
                             isActive

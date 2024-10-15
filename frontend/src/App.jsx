@@ -50,6 +50,8 @@ import DoctorPatientDetails from "./Components/DoctorPanel/DoctorPatientDetails"
 import PrescriptionTools from "./pages/doctor/PrescriptionTools";
 import Appointments from "./Components/DoctorPanel/Appointments";
 import UodateDoctorForm from "./Components/updateDoctorForm";
+import PatientDetails from "./Components/DoctorPanel/PatientDetails";
+import CreatePrescription from "./Components/DoctorPanel/CreatePrescription";
 
 const App = () => {
   return (
@@ -197,7 +199,7 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
-             <Route
+            <Route
               path="/adddoctorform"
               element={
                 <ProtectedRoute>
@@ -353,8 +355,9 @@ const App = () => {
             </Route>
 
             {/* PrescriptionTools */}
+
             <Route
-              path="/prescriptionTools"
+              path="/prescriptiontools"
               element={
                 <ProtectedRoute>
                   <PrescriptionTools />
@@ -362,11 +365,26 @@ const App = () => {
               }
             >
               <Route
-                index
                 path="appointments"
                 element={
                   <ProtectedRoute>
                     <Appointments />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="patientdetails"
+                element={
+                  <ProtectedRoute>
+                    <PatientDetails />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="createprescription"
+                element={
+                  <ProtectedRoute>
+                    <CreatePrescription />
                   </ProtectedRoute>
                 }
               />

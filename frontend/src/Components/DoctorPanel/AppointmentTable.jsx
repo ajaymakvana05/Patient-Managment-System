@@ -96,7 +96,7 @@ const AppointmentTable = () => {
             className={`py-2 px-4 text-sm font-medium focus:outline-none ${
               activeTab === tab
                 ? "text-blue border-b-2 border-blue"
-                : "text-gray-500 hover:text-blue"
+                : "text-grey hover:text-blue"
             }`}
             onClick={() => handleTabClick(tab)}
           >
@@ -169,8 +169,8 @@ const AppointmentTable = () => {
                   <span
                     className={`py-1 px-3 rounded-full text-xs ${
                       appointment.type === "Online"
-                        ? "bg-yellow-100 text-yellow-600" 
-                        : "bg-blue-100 text-blue-600" 
+                        ? "bg-yellow-100 text-yellow-600"
+                        : "bg-blue-100 text-blue-600"
                     }`}
                   >
                     {appointment.type}
@@ -180,13 +180,13 @@ const AppointmentTable = () => {
                 <td className="py-3 px-6 text-center">
                   <div className="flex item-center justify-center">
                     <button
-                      className="w-4 mr-2 transform hover:text-purple-500 hover:scale-110"
+                      className="w-4 mr-2 transform hover:text-purple hover:scale-110"
                       onClick={() => handleEditClick(appointment)}
                     >
                       <img src={CalIconblue} alt="" />
                     </button>
                     <button
-                      className="w-4 transform hover:text-red-500 hover:scale-110"
+                      className="w-4 transform hover:text-red hover:scale-110"
                       onClick={() => handleDeleteClick(appointment)}
                     >
                       <img src={CalIconred} alt="" />

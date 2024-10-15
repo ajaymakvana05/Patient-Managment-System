@@ -82,7 +82,7 @@ const PatientsManagementTable = () => {
             key={tab}
             className={`px-4 py-2 text-sm font-medium ${
               activeTab === tab
-                ? "border-b-2 border-blue-500 text-blue-500"
+                ? "border-b-2 border-blue text-blue"
                 : "text-gray-500"
             }`}
             onClick={() => setActiveTab(tab)}
@@ -92,7 +92,6 @@ const PatientsManagementTable = () => {
         ))}
       </div>
 
-   
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-semibold">
           {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} Appointments
@@ -108,7 +107,7 @@ const PatientsManagementTable = () => {
           />
         </div>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-blue text-white px-4 py-2 rounded hover:bg-blue"
           onClick={() => navigate("/addappointmentform")}
         >
           Add New Appointment

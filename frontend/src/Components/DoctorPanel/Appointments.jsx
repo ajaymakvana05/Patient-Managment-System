@@ -1,5 +1,7 @@
 import React from "react";
-import { FaCalendarAlt } from "react-icons/fa"; // Importing the calendar icon
+import { FaCalendarAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { AiOutlineEye } from "react-icons/ai";
 
 const appointments = [
   {
@@ -34,29 +36,40 @@ const appointments = [
     time: "10:10 AM",
     status: "New",
   },
-  // Add more appointments as needed
 ];
 
 const AppointmentCard = ({ appointment }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white shadow-md rounded-lg p-4 m-2 w-full">
       <div className="flex justify-between items-center mb-2">
         <h3 className="text-lg font-bold">{appointment.name}</h3>
-        <span
-          className={`px-2 py-1 text-sm rounded-lg ${
-            appointment.status === "New"
-              ? "bg-blue-100 text-blue-500"
-              : "bg-gray-200 text-gray-500"
-          }`}
-        >
-          {appointment.status}
-        </span>
+        <div className="flex items-center">
+          <span
+            className={`px-2 py-1 text-sm rounded-lg mr-2 ${
+              appointment.status === "New"
+                ? "bg-blue text-blue-500"
+                : "bg-gray-200 text-gray-500"
+            }`}
+          >
+            {appointment.status}
+          </span>
+          {/* View Icon */}
+          <AiOutlineEye
+            className="text-gray-500 cursor-pointer hover:text-blue-500"
+            onClick={() => navigate("/prescriptionTools/patientdetails")}
+          />
+        </div>
       </div>
       <p className="text-gray-600">Appointment Type: {appointment.type}</p>
       <p className="text-gray-600">Patient Age: {appointment.age} Years</p>
       <p className="text-gray-600">Patient Gender: {appointment.gender}</p>
       <p className="text-gray-600">Appointment Time: {appointment.time}</p>
-      <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-600">
+      <button
+        className="mt-4 bg-blue text-white py-2 px-4 rounded-lg w-full hover:bg-blue"
+        onClick={() => navigate("/prescriptionTools/patientdetails")}
+      >
         Create Prescription
       </button>
     </div>
@@ -71,7 +84,7 @@ const Appointments = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-gray-100 p-6">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-2xl font-bold">Today Appointment</h2>
         <div className="flex items-center space-x-4">

@@ -11,7 +11,7 @@ const PatientRecordAccess = () => {
       {/* Sidebar */}
       <DoctorSidebar />
 
-      <div className="flex flex-col flex-grow bg-greyLightest">
+      <div className="flex flex-col flex-grow bg-greyLightest w-1/2">
         <DoctorHeader />
 
         <div className="flex flex-col h-full overflow-y-auto">
