@@ -59,7 +59,7 @@ const UodateDoctorForm = () => {
       setDoctorData((prevData) => ({ ...prevData, photo: file }));
       setPhotoPreview(URL.createObjectURL(file));
     } else if (name === "signature") {
-      setDoctorData((prevData) => ({ ...prevData, signature: file }));
+      setDoctorData((prevData) => ({ ...prevData, signature: file }));z
       setSignaturePreview(URL.createObjectURL(file));
     }
   };

@@ -18,6 +18,8 @@ const DoctorManagementTable = () => {
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [selectedDoctorId, setSelectedDoctorId] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [doctorData, setDoctorData] = useState([]);
+  // const [searchTerm, setSearchTerm] = useState("");
 
 
   const toggleDrawer = (data = null) => {
@@ -45,7 +47,7 @@ const DoctorManagementTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
-  const [doctores, setDoctorData] = useState([]);
+  // const [doctores, setDoctorData] = useState([]);
 
 
   useEffect(() => {
@@ -99,7 +101,7 @@ const DoctorManagementTable = () => {
   };
 
 
-  const filteredDoctors = doctores.filter((doctor) =>
+  const filteredDoctors = doctorData.filter((doctor) =>
     doctor.DoctorName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -124,9 +126,9 @@ const DoctorManagementTable = () => {
                 {/* Header Section */}
                 <div className="flex items-center space-x-4 mb-4">
                   <img
-                    src="https://via.placeholder.com/100"
-                    alt="Doctor"
-                    className="rounded-full w-20 h-20 object-cover border-2 border-gray-300"
+                    src={selectedDoctor.DoctorImage || "https://via.placeholder.com/100"}
+                    alt="User"
+                    className="w-8 h-8 md:w-16 md:h-14 rounded-full"
                   />
                   <div>
                     <h2 className="text-2xl font-bold text-gray-800">{selectedDoctor.DoctorName}</h2>
@@ -173,9 +175,9 @@ const DoctorManagementTable = () => {
                   <div className="col-span-2">
                     <p className="text-gray-500">Signature</p>
                     <img
-                      src={selectedDoctor.signature}
+                      src={selectedDoctor.DoctorSignature}
                       alt="Signature"
-                      className="border border-gray-300 rounded p-2"
+                      className="border border-gray-300 rounded p-2 md:w-32 md:h-14"
                     />
                   </div>
                 </div>
@@ -311,7 +313,7 @@ const DoctorManagementTable = () => {
 
             {/* Table Body */}
             <tbody className="text-gray-700 text-sm">
-              {doctores?.length === 0 ? (
+              {doctorData?.length === 0 ? (
                 <tr>
                   <td colSpan="8" className="text-center p-4 text-gray-500">
                     <img
@@ -325,8 +327,15 @@ const DoctorManagementTable = () => {
                 </tr>
               ) : (
                 filteredDoctors?.map((doctor) => (
-                  <tr key={doctor.id} className="border-b hover:bg-gray-100">
-                    <td className="p-3">{doctor.DoctorName}</td>
+                  <tr key={doctor._id} className="border-b hover:bg-gray-100">
+                    <td className="p-3 flex items-center space-x-2">
+                      <img
+                        src={doctor.DoctorImage || "https://via.placeholder.com/100"}
+                        alt={doctor.DoctorName}
+                        className="w-8 h-8 rounded-full"
+                      />
+                      <span>{doctor.DoctorName}</span>
+                    </td>
                     <td className="p-3">
                       {doctor.gender === "Male" ? (
                         <FaMale className="text-blue-500" />
@@ -336,9 +345,15 @@ const DoctorManagementTable = () => {
                     </td>
                     <td className="p-3">{doctor.DoctorQualification}</td>
                     <td className="p-3">{doctor.specialtiyType}</td>
-                    <td className="p-3 "><span className=" px-5 py-2 bg-[#f6f8fb] rounded-3xl ">{doctor.workingTime}</span></td>
-                    <td className="p-3"><span className=" px-5 py-2 bg-[#f6f8fb] rounded-3xl ">{doctor.CheckupTime}</span></td>
-                    <td className="p-3"><span className=" px-5 py-2 bg-[#f6f8fb] rounded-3xl ">{doctor.BreakTime}</span></td>
+                    <td className="p-3">
+                      <span className="px-5 py-2 bg-[#f6f8fb] rounded-3xl">{doctor.workingTime}</span>
+                    </td>
+                    <td className="p-3">
+                      <span className="px-5 py-2 bg-[#f6f8fb] rounded-3xl">{doctor.CheckupTime}</span>
+                    </td>
+                    <td className="p-3">
+                      <span className="px-5 py-2 bg-[#f6f8fb] rounded-3xl">{doctor.BreakTime}</span>
+                    </td>
                     <td className="p-3 text-center flex justify-center items-center space-x-2">
                       <button
                         className="text-blue hover:text-blue p-2 bg-[#f6f8fb] rounded"
@@ -346,10 +361,16 @@ const DoctorManagementTable = () => {
                       >
                         <FaEye />
                       </button>
-                      <button onClick={() => handleEdit(doctor._id)} className="text-green hover:text-green p-2 bg-[#f6f8fb] rounded">
+                      <button
+                        onClick={() => handleEdit(doctor._id)}
+                        className="text-green hover:text-green p-2 bg-[#f6f8fb] rounded"
+                      >
                         <FaEdit />
                       </button>
-                      <button onClick={() => handleDeleteClick(doctor._id)} className="text-red hover:text-red p-2 bg-[#f6f8fb] rounded">
+                      <button
+                        onClick={() => handleDeleteClick(doctor._id)}
+                        className="text-red hover:text-red p-2 bg-[#f6f8fb] rounded"
+                      >
                         <FaTrashAlt />
                       </button>
                     </td>
@@ -357,6 +378,8 @@ const DoctorManagementTable = () => {
                 ))
               )}
             </tbody>
+
+
           </table>
         </div>
       </div>

@@ -53,34 +53,34 @@ const DoctorProfile = () => {
     setErrorMessage(""); // Reset any previous error messages
 
     try {
-        // Assuming profileData contains the updated information
-        const response = await axios.patch(
-            `http://localhost:8090/doctor/update/${profileData._id}`, // Use the actual ID here
-            profileData,
-            { withCredentials: true } // Ensure credentials are included for authentication
-        );
+      // Assuming profileData contains the updated information
+      const response = await axios.patch(
+        `http://localhost:8090/doctor/update/${profileData._id}`, // Use the actual ID here
+        profileData,
+        { withCredentials: true } // Ensure credentials are included for authentication
+      );
 
-        if (response.data) {
-            setSuccessMessage("Profile updated successfully!");
-            toast.success("Profile updated successfully!");
-            setIsEditable(false); // Set editable state to false after update
+      if (response.data) {
+        setSuccessMessage("Profile updated successfully!");
+        toast.success("Profile updated successfully!");
+        setIsEditable(false); // Set editable state to false after update
 
-            // Clear success message after 3 seconds
-            setTimeout(() => {
-                setSuccessMessage("");
-            }, 3000);
-        }
+        // Clear success message after 3 seconds
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 3000);
+      }
     } catch (error) {
-        console.error("Error updating profile", error);
+      console.error("Error updating profile", error);
 
-        // Update error message based on response
-        setErrorMessage(
-            "Failed to update profile: " +
-            (error.response && error.response.data.msg ? error.response.data.msg : error.message)
-        );
+      // Update error message based on response
+      setErrorMessage(
+        "Failed to update profile: " +
+        (error.response && error.response.data.msg ? error.response.data.msg : error.message)
+      );
     }
-};
-;
+  };
+  ;
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p className="error">Error: {error}</p>;
@@ -114,8 +114,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="firstname"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.DoctorName
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 First Name
@@ -136,8 +136,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="lastname"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.LastName
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 Last Name
@@ -158,8 +158,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="email"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.DoctorEmail
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 Email Address
@@ -171,7 +171,7 @@ const DoctorProfile = () => {
               <input
                 className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 type="number"
-                id="phonenumber"
+                id="phoneNumber"
                 value={profileData.phoneNumber || ""}
                 onChange={handleChange}
                 readOnly={!isEditable}
@@ -180,8 +180,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="phonenumber"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.phoneNumber
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 Phone Number
@@ -202,8 +202,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="hospitalName"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.HospitalName
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 Hospital Name
@@ -224,8 +224,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="gender"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.gender
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 Gender
@@ -246,8 +246,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="city"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.city
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 City
@@ -268,8 +268,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="state"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.state
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 State
@@ -290,8 +290,8 @@ const DoctorProfile = () => {
               <label
                 htmlFor="country"
                 className={`absolute left-4 top-2 transition-all duration-200 transform ${profileData.country
-                    ? "-translate-y-4 scale-75"
-                    : "translate-y-0 scale-100"
+                  ? "-translate-y-4 scale-75"
+                  : "translate-y-0 scale-100"
                   } bg-white px-1 text-sm font-medium text-gray-600`}
               >
                 Country

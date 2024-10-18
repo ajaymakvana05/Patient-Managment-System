@@ -71,6 +71,12 @@ const DoctorSchema = new mongoose.Schema(
         HospitalWebsiteLink: { type: String, required: true },
         EmergencyContactNumber: { type: Number, required: true },
         Password: { type: String, required: true },
+        DoctorImage: {
+            type: String, // URL of the image
+        },
+        DoctorSignature: {
+            type: String, // URL of the signature
+        },
         imageUrl: { type: String, required: false }, 
         AdminID: { type: mongoose.Schema.Types.ObjectId, ref: "Admin" },
     },

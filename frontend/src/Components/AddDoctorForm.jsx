@@ -57,11 +57,11 @@ const AddDoctorForm = () => {
     const { name, files } = e.target;
     const file = files[0];
 
-    if (name === "photo") {
-      setDoctorData((prevData) => ({ ...prevData, photo: file }));
+    if (name === "DoctorImage") {
+      setDoctorData((prevData) => ({ ...prevData, DoctorImage: file }));
       setPhotoPreview(URL.createObjectURL(file));
-    } else if (name === "signature") {
-      setDoctorData((prevData) => ({ ...prevData, signature: file }));
+    } else if (name === "DoctorSignature") {
+      setDoctorData((prevData) => ({ ...prevData, DoctorSignature: file }));
       setSignaturePreview(URL.createObjectURL(file));
     }
   };
@@ -109,24 +109,22 @@ const AddDoctorForm = () => {
                 <div className="mr-6">
                   <div className="mb-6 flex flex-col items-center">
                     <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-200 flex justify-center items-center">
-                      {photoPreview ? (
-                        <img
-                          src={photoPreview}
-                          alt="Profile"
-                          className="w-full h-full object-cover"
-                        />
+                    {photoPreview ? (
+                        <img src={photoPreview} alt="Profile" className="w-full h-full object-cover" />
                       ) : (
                         <FaUserCircle size={50} className="text-gray-400" />
                       )}
+
                     </div>
                     <label className="block mt-2 font-medium">
                       Choose Photo
                       <input
                         type="file"
-                        name="photo"
+                        name="DoctorImage"
                         accept="image/*"
                         onChange={handleFileChange}
                         className="mt-1 w-full border rounded-lg hidden"
+                        required
                       />
                     </label>
                   </div>
@@ -134,11 +132,7 @@ const AddDoctorForm = () => {
                   <div className="flex flex-col items-center">
                     <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-200 flex justify-center items-center">
                       {signaturePreview ? (
-                        <img
-                          src={signaturePreview}
-                          alt="Signature"
-                          className="w-full h-full object-cover"
-                        />
+                        <img src={signaturePreview} alt="Signature" className="w-full h-full object-cover" />
                       ) : (
                         <FaSignature size={50} className="text-gray-400" />
                       )}
@@ -147,10 +141,11 @@ const AddDoctorForm = () => {
                       Upload Signature
                       <input
                         type="file"
-                        name="signature"
+                        name="DoctorSignature"
                         accept="image/*"
                         onChange={handleFileChange}
                         className="mt-1 w-full border rounded-lg hidden"
+                        required
                       />
                     </label>
                   </div>

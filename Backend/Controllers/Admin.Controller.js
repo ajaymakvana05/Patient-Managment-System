@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 require('dotenv').config();
+const cloudinary = require("cloudinary").v2;
 const AdmintModel = require("../Models/Admin.Schema")
 const HospitalModel = require("../Models/Hospital.Schema")
 const DoctorModel = require("../Models/Doctor.schema");
@@ -175,7 +176,7 @@ const UpdateDoctor = async (req, res) => {
 
         if (!updatedDoctor) {
             return res.status(404).json({ msg: "Doctor not found" });
-        }
+        }   
 
         res.status(200).json(updatedDoctor);
     } catch (error) {
@@ -203,7 +204,7 @@ const AddDoctor = async (req, res) => {
     try {
         const { DoctorEmail, Password } = req.body;
 
-        // Check if email and password are provided
+        // Check for required fields
         if (!DoctorEmail || !Password) {
             return res.status(400).json({ msg: "Email and password are required." });
         }
@@ -217,10 +218,34 @@ const AddDoctor = async (req, res) => {
         // Hash the password
         const hashedPassword = await bcrypt.hash(Password, 10);
 
-        // Create a new doctor record
-        const newDoctor = new DoctorModel({ ...req.body, Password: hashedPassword });
-        await newDoctor.save();
+        // Handle file uploads
+        const doctorImageFile = req.files.DoctorImage ? req.files.DoctorImage[0] : null;
+        const doctorSignatureFile = req.files.DoctorSignature ? req.files.DoctorSignature[0] : null;
 
+        let doctorImageUrl = '';
+        let doctorSignatureUrl = '';
+
+        // Upload image to Cloudinary if file exists
+        if (doctorImageFile) {
+            const uploadedImage = await cloudinary.uploader.upload(doctorImageFile.path);
+            doctorImageUrl = uploadedImage.secure_url;
+        }
+
+        // Upload signature to Cloudinary if file exists
+        if (doctorSignatureFile) {
+            const uploadedSignature = await cloudinary.uploader.upload(doctorSignatureFile.path);
+            doctorSignatureUrl = uploadedSignature.secure_url;
+        }
+
+        // Create a new doctor record
+        const newDoctor = new DoctorModel({
+            ...req.body,
+            Password: hashedPassword,
+            DoctorImage: doctorImageUrl,
+            DoctorSignature: doctorSignatureUrl,
+        });
+
+        await newDoctor.save();
         return res.status(201).json({ msg: "Doctor added successfully!" });
     } catch (error) {
         console.error("Error saving doctor:", error);

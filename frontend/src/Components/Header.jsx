@@ -49,7 +49,7 @@ const Header = ({ toggleSidebar }) => {
           onClick={handleProfileClick}
         >
           <img
-            src={profileData?.imageUrl || "https://via.placeholder.com/100"} // Use profile image or placeholder
+            src={profileData?.imageUrl || "https://via.placeholder.com/100"} 
             alt="User"
             className="w-8 h-8 md:w-10 md:h-10 rounded-full"
           />
