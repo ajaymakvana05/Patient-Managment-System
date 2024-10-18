@@ -35,7 +35,7 @@ const UodateDoctorForm = () => {
     HospitalAddress: '',
     HospitalWebsiteLink: '',
     EmergencyContactNumber: '',
-    // password: '',
+    Password: '',
     DoctorImage: {},
     DoctorSignature: {},
   });
@@ -487,18 +487,18 @@ const UodateDoctorForm = () => {
                     />
                   </div>
 
-                  {/* <div>
+                 <div>
                         <label className="block text-sm font-medium mb-1">Password</label>
                         <input
                             type="password"
-                            name="password"
-                            value={doctorData.password}
+                            name="Password"
+                            value={doctorData.Password}
                             onChange={handleChange}
                             className="w-full border rounded-lg px-3 py-2"
                             placeholder="Enter Password"
                             required
                         />
-                    </div> */}
+                    </div>
                 </div>
               </div>
 

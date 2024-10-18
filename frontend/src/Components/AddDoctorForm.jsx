@@ -35,7 +35,7 @@ const AddDoctorForm = () => {
     HospitalAddress: '',
     HospitalWebsiteLink: '',
     EmergencyContactNumber: '',
-    // password: '',
+    Password: '',
     DoctorImage: {},
     DoctorSignature: {},
   });
@@ -203,12 +203,12 @@ const AddDoctorForm = () => {
                     <label className="block text-sm font-medium mb-1">Specialty Type</label>
                     <input
                       type="text"
-                      name="specialtiyType"  
+                      name="specialtiyType"
                       value={doctorData.specialtiyType}
                       onChange={handleChange}
                       className="w-full border rounded-lg px-3 py-2"
                       placeholder="Enter Specialty Type"
-                      required  
+                      required
                     />
                   </div>
 
@@ -261,7 +261,7 @@ const AddDoctorForm = () => {
                       className="w-full border rounded-lg px-3 py-2"
                       placeholder="Enter Break Time"
                       required
-                     
+
                     />
                   </div>
 
@@ -471,19 +471,18 @@ const AddDoctorForm = () => {
                       required
                     />
                   </div>
-
-                  {/* <div>
-                        <label className="block text-sm font-medium mb-1">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            value={doctorData.password}
-                            onChange={handleChange}
-                            className="w-full border rounded-lg px-3 py-2"
-                            placeholder="Enter Password"
-                            required
-                        />
-                    </div> */}
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Password</label>
+                    <input
+                      type="password"
+                      name="Password"
+                      value={doctorData.Password}
+                      onChange={handleChange}
+                      className="w-full border rounded-lg px-3 py-2"
+                      placeholder="Enter Password"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
 

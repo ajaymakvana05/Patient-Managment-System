@@ -81,7 +81,7 @@ const resetpassword = async (req, res) => {
         }
 
         // Log user password from the database
-        console.log("User's hashed password from DB:", user.password);
+        console.log("User's hashed password from DB:", user.Password);
 
         // Check if the old password matches the hashed password in the DB
         const isMatch = await bcrypt.compare(oldpassword, user.password);
@@ -166,6 +166,11 @@ const AllDoctor = async (req, res) => {
 const UpdateDoctor = async (req, res) => {
     try {
         const { id } = req.params;
+        if (req.body.Password) {
+            // Hash the new password
+            req.body.Password = await bcrypt.hash(req.body.Password, 10);
+        }
+
         const updatedDoctor = await DoctorModel.findByIdAndUpdate(id, req.body, { new: true });
 
         if (!updatedDoctor) {
@@ -195,18 +200,36 @@ const DeleteDoctor = async (req, res) => {
 };
 
 const AddDoctor = async (req, res) => {
-    console.log("Admin ID:", req.body.AdminID);
-    console.log("Doctor Data:", req.body);
-
     try {
-        const newDoctor = new DoctorModel(req.body);
+        const { DoctorEmail, Password } = req.body;
+
+        // Check if email and password are provided
+        if (!DoctorEmail || !Password) {
+            return res.status(400).json({ msg: "Email and password are required." });
+        }
+
+        // Check if the doctor already exists
+        const existingDoctor = await DoctorModel.findOne({ DoctorEmail });
+        if (existingDoctor) {
+            return res.status(400).json({ msg: "Doctor with this email already exists." });
+        }
+
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(Password, 10);
+
+        // Create a new doctor record
+        const newDoctor = new DoctorModel({ ...req.body, Password: hashedPassword });
         await newDoctor.save();
+
         return res.status(201).json({ msg: "Doctor added successfully!" });
     } catch (error) {
         console.error("Error saving doctor:", error);
         return res.status(500).json({ msg: "Failed to add doctor. Please try again." });
     }
 };
+
+
+
 
 const AllPatient = async (req, res) => {
     try {
