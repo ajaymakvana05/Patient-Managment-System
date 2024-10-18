@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import RightSideContent from "./RightSideContent";
 import { toast } from "react-toastify";
@@ -102,6 +102,14 @@ const Register = () => {
       }
     }
   };
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem('token')
+    console.log('isAuthenticated ::::::::::::', isAuthenticated);
+    if (isAuthenticated) {
+      navigate('/dashboard')
+    }
+  })
 
   return (
     <div className="grid md:grid-cols-2 grid-cols-1 min-h-screen">
