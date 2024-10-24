@@ -5,11 +5,11 @@ const PatientDoctorManagementPopUp = ({ closePopup }) => {
   return (
     <div className="flex justify-center bg-white items-center min-h-screen max-w-2xl p-4">
       <div className="w-full max-w-3xl  rounded-lg shadow-lg p-6">
-        <div className="flex items-center mb-4">
-          <h1 className="text-xl font-semibold bg-red">Doctor Management</h1>
+        <div className="flex items-center mb-4 justify-between">
+          <h1 className="text-xl font-semibold ">Doctor Management</h1>
           <button
             onClick={closePopup}
-            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            className=" text-gray-500 hover:text-gray"
           >
             <AiOutlineClose size={20} />
           </button>

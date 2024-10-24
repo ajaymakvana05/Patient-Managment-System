@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { FaCalendarAlt, FaCaretDown } from "react-icons/fa";
-import { AiFillEye ,AiOutlineClose } from "react-icons/ai";
+import { AiFillEye, AiOutlineClose } from "react-icons/ai";
 import PatientDoctorManagementPopUp from "./PatientDoctorManagementPopUp";
+import { useNavigate } from "react-router-dom";
 
 const PatientMyAppointment = () => {
   const [activeTab, setActiveTab] = useState("scheduled");
-  const [showPopup, setShowPopup] = useState(false); 
+  const [showPopup, setShowPopup] = useState(false);
   const [selectedAppointment, setSelectedAppointment] = useState(null);
+  const navigate = useNavigate();
 
   // Appointment data
   const scheduledAppointments = [
@@ -105,13 +107,13 @@ const PatientMyAppointment = () => {
                   onClick={() => handleViewClick(appointment)}
                   className="text-sm text-gray-500 flex items-center"
                 >
-                  <AiFillEye className="mr-1" /> {/* View Icon */}
+                  <AiFillEye className="mr-1" />
                 </button>
               </div>
               {/* Popup Modal */}
               {showPopup && selectedAppointment && (
                 <div className="fixed inset-0 backdrop-blur-lg bg-opacity-50 flex items-center justify-end z-50">
-                  <PatientDoctorManagementPopUp />
+                  <PatientDoctorManagementPopUp closePopup={closePopup} />
                 </div>
               )}
               <div className="flex justify-between">
@@ -146,7 +148,12 @@ const PatientMyAppointment = () => {
                 <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">
                   Cancel
                 </button>
-                <button className="bg-blue text-white px-4 py-2 rounded-md">
+                <button
+                  onClick={() =>
+                    navigate("/appointmentbooking/patientappointmenttimelot")
+                  }
+                  className="bg-blue text-white px-4 py-2 rounded-md"
+                >
                   Reschedule
                 </button>
               </div>
@@ -198,7 +205,12 @@ const PatientMyAppointment = () => {
               </span>
               <FaCaretDown className="text-gray-500 ml-2" />{" "}
             </div>
-            <button className="bg-blue text-white px-4 py-2 rounded-md">
+            <button
+              onClick={() =>
+                navigate("/appointmentbooking/patientappointmentbooking")
+              }
+              className="bg-blue text-white px-4 py-2 rounded-md"
+            >
               Book Appointment
             </button>
           </div>

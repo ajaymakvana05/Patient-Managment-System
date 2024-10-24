@@ -23,7 +23,9 @@ const PatientHeader = ({ toggleSidebar }) => {
         });
 
         if (!response.ok) {
-          throw new Error(`Failed to fetch patient data: ${response.statusText}`);
+          throw new Error(
+            `Failed to fetch patient data: ${response.statusText}`
+          );
         }
 
         const data = await response.json();
@@ -56,7 +58,7 @@ const PatientHeader = ({ toggleSidebar }) => {
         </span>
       </div>
 
-      <div className="flex items-center space-x-4">
+      <div className="md:flex hidden items-center space-x-4">
         <div className=" md:block">
           <SearchBarWithDropdown className="md:px-3" />
         </div>
@@ -65,7 +67,8 @@ const PatientHeader = ({ toggleSidebar }) => {
 
         <div
           className="flex items-center space-x-2 cursor-pointer"
-          onClick={handleProfileClick}>
+          onClick={handleProfileClick}
+        >
           <img
             src={formData?.imageUrl || "https://via.placeholder.com/100"}
             alt="Profile"

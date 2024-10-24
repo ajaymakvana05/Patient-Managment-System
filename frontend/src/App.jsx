@@ -76,6 +76,8 @@ import PatientsTestReports from "./Components/PatientPanel/PatientsTestReports.j
 import PatientMedicalHistory from "./Components/PatientPanel/PatientMedicalHistory.jsx";
 import AppointmentBooking from "./pages/patient/AppointmentBooking.jsx";
 import PatientMyAppointment from "./Components/PatientPanel/PatientMyAppointment.jsx";
+import PatientAppointmentBooking from "./Components/PatientPanel/PatientAppointmentBooking.jsx";
+import PatientAppointmentTimeSlot from "./Components/PatientPanel/PatientAppointmentTimeSlot.jsx";
 
 const App = () => {
   return (
@@ -588,6 +590,22 @@ const App = () => {
                 element={
                   <PatientProtect>
                     <PatientMyAppointment />
+                  </PatientProtect>
+                }
+              />
+              <Route
+                path="patientappointmentbooking"
+                element={
+                  <PatientProtect>
+                    <PatientAppointmentBooking />
+                  </PatientProtect>
+                }
+              />
+              <Route
+                path="patientappointmenttimelot"
+                element={
+                  <PatientProtect>
+                    <PatientAppointmentTimeSlot />
                   </PatientProtect>
                 }
               />

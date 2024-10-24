@@ -11,7 +11,7 @@ const PatientProfileDashboard = () => {
     setSidebarOpen((prevState) => !prevState);
   };
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex  h-screen">
       <PatientSidebar
         isSidebarOpen={isSidebarOpen}
         toggleSidebar={toggleSidebar}
@@ -37,21 +37,20 @@ const PatientProfileDashboard = () => {
           </div>
 
           <div
-  className="profile-box bg-white flex md:flex-row m-8 rounded-lg shadow-lg"
-  style={{ margin: "4rem", marginTop: "-60px" }}
->
-  <div
-    className="hidden md:flex md:flex-shrink-0 p-4 rounded-l-lg"
-    style={{ borderRight: "3px solid #D9D9D94D" }}
-  >
-    <PatientProfileSidebar />
-  </div>
+            className="profile-box bg-white flex md:flex-row flex-col m-8 rounded-lg shadow-lg md:m-0"
+            style={{ margin: "4rem", marginTop: "-60px" }}
+          >
+            <div
+              className="md:flex md:flex-shrink-0 p-4 rounded-l-lg"
+              style={{ borderRight: "3px solid #D9D9D94D" }}
+            >
+              <PatientProfileSidebar />
+            </div>
 
-  <div className="flex-grow p-4 md:w-2/3">
-    <Outlet></Outlet>
-  </div>
-</div>
-
+            <div className="flex-grow p-4 md:w-2/3">
+              <Outlet></Outlet>
+            </div>
+          </div>
         </div>
       </div>
     </div>

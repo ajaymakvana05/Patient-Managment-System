@@ -9,7 +9,6 @@ const PatientDetailDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-
   useEffect(() => {
     const fetchAdminData = async () => {
       try {
@@ -20,7 +19,9 @@ const PatientDetailDashboard = () => {
         });
 
         if (!response.ok) {
-          throw new Error(`Failed to fetch patient data: ${response.statusText}`);
+          throw new Error(
+            `Failed to fetch patient data: ${response.statusText}`
+          );
         }
 
         const data = await response.json();
@@ -38,7 +39,6 @@ const PatientDetailDashboard = () => {
     fetchAdminData();
   }, []);
 
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -54,21 +54,16 @@ const PatientDetailDashboard = () => {
 
   return (
     <div className=" min-h-screen">
-      <div className="p-6 rounded-lg ">
-        {/* <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-          <div className="flex items-center mb-4 md:mb-0">
-            <h2 className="text-xl md:text-2xl font-bold">Patient Details</h2>
-          </div>
-          <button className="bg-blue text-white px-4 py-2 rounded-lg">
-            <i className="fas fa-edit mr-2"></i>Edit Profile
-          </button>
-        </div> */}
-
+      <div className="p-4 rounded-lg">
         <div className="p-6 bg-white shadow-md rounded-md">
           <div className="flex justify-between items-center  pb-2 mb-4">
             <h1 className="text-xl font-semibold">Patient Details</h1>
-            <button className="bg-blue text-white px-4 py-2 rounded-md">
-              <i className="fas fa-edit"></i> <Link to="/patientprofiledashboard/patientprofile">Edit Profile</Link>
+
+            <button className="bg-blue text-white lg:px-4 py-2 px-2 rounded-md">
+              <i className="fas fa-edit"></i>{" "}
+              <Link to="/patientprofiledashboard/patientprofile">
+                Edit Profile
+              </Link>
             </button>
           </div>
 
@@ -83,9 +78,12 @@ const PatientDetailDashboard = () => {
             <div className="sm:w-7/7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4 text-sm">
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey">Name</p>
-                <p className="font-semibold"> {formData?.firstname
-                  ? `${formData.firstname} ${formData.lastname}`
-                  : "Loading..."}</p>
+                <p className="font-semibold">
+                  {" "}
+                  {formData?.firstname
+                    ? `${formData.firstname} ${formData.lastname}`
+                    : "Loading..."}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey">Number</p>
@@ -101,7 +99,11 @@ const PatientDetailDashboard = () => {
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey">DOB</p>
-                <p className="font-semibold">{formData.dateofbirth ? formData.dateofbirth.split('T')[0] : ""}</p>
+                <p className="font-semibold">
+                  {formData.dateofbirth
+                    ? formData.dateofbirth.split("T")[0]
+                    : ""}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey">Age</p>
@@ -142,7 +144,7 @@ const PatientDetailDashboard = () => {
         </div>
       </div>
 
-      <div className="p-6 rounded-lg ">
+      <div className="p-4 rounded-lg ">
         <div className="flex flex-col lg:flex-row justify-between mb-6 gap-4 p-6 bg-white shadow-md rounded-md">
           <div className="w-full lg:w-2/3 flex flex-col">
             <div className="flex justify-between items-center mb-4">
@@ -154,20 +156,23 @@ const PatientDetailDashboard = () => {
                 }
               >
                 View All History
-              </button>
+              </button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-grow">
+              {/* Individual Medical History Card */}
               <div className="bg-white rounded-lg shadow">
                 <div className="flex justify-between bg-greyLightest p-4">
                   <h3 className="font-semibold">Dulce Schleifer</h3>
                   <p className="text-gray-500 text-sm">2 Jan, 2022</p>
                 </div>
-                <h4 className="mt-2 font-semibold">Patient Issue</h4>
-                <p className="text-gray-600 text-sm">
-                  the printing and typesetting industry. Lorem Ipsum has been
-                  the industry's standard dummy text ever since the 1500s, when
-                  an unknown printer took.
-                </p>
+                <div className="p-4">
+                  <h4 className="mt-2 font-semibold">Patient Issue</h4>
+                  <p className="text-gray-600 text-sm">
+                    the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took.
+                  </p>
+                </div>
               </div>
 
               <div className="bg-white rounded-lg shadow">
@@ -175,14 +180,17 @@ const PatientDetailDashboard = () => {
                   <h3 className="font-semibold">Dulce Workman</h3>
                   <p className="text-gray-500 text-sm">2 Jan, 2022</p>
                 </div>
-                <h4 className="mt-2 font-semibold">Patient Issue</h4>
-                <p className="text-gray-600 text-sm">
-                  the printing and typesetting industry. Lorem Ipsum has been
-                  the industry's standard dummy text ever since the 1500s, when
-                  an unknown printer took.
-                </p>
+                <div className="p-4">
+                  <h4 className="mt-2 font-semibold">Patient Issue</h4>
+                  <p className="text-gray-600 text-sm">
+                    the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took.
+                  </p>
+                </div>
               </div>
-              <div className="bg-white  rounded-lg shadow">
+
+              <div className="bg-white rounded-lg shadow">
                 <div className="flex justify-between bg-greyLightest p-4">
                   <h3 className="font-semibold lg:whitespace-nowrap">
                     Miracle Septimus
@@ -191,16 +199,19 @@ const PatientDetailDashboard = () => {
                     2 Jan, 2022
                   </p>
                 </div>
-                <h4 className="mt-2 font-semibold">Patient Issue</h4>
-                <p className="text-gray-600 text-sm">
-                  the printing and typesetting industry. Lorem Ipsum has been
-                  the industry's standard dummy text ever since the 1500s, when
-                  an unknown printer took.
-                </p>
+                <div className="p-4">
+                  <h4 className="mt-2 font-semibold">Patient Issue</h4>
+                  <p className="text-gray-600 text-sm">
+                    the printing and typesetting industry. Lorem Ipsum has been
+                    the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
+          {/* Prescriptions Section */}
           <div className="w-full lg:w-1/3 flex flex-col">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-bold">Prescriptions</h2>
@@ -211,10 +222,10 @@ const PatientDetailDashboard = () => {
                 className="text-blue"
               >
                 View All Prescription
-              </button>
+              </button>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow flex-grow">
-              <table className="w-full text-sm">
+            <div className="bg-white p-4 rounded-lg shadow flex-grow overflow-x-auto">
+              <table className="min-w-full text-sm">
                 <thead>
                   <tr className="text-left text-gray-500">
                     <th className="pb-2">Hospital Name</th>
@@ -229,7 +240,7 @@ const PatientDetailDashboard = () => {
                     <td className="py-2">2 Jan, 2022</td>
                     <td className="py-2">Colds and Flu</td>
                     <td className="py-2">
-                      <img src={viewIcon} alt="" />
+                      <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -237,7 +248,7 @@ const PatientDetailDashboard = () => {
                     <td className="py-2">2 Jan, 2022</td>
                     <td className="py-2">Allergies</td>
                     <td className="py-2">
-                      <img src={viewIcon} alt="" />
+                      <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -245,7 +256,7 @@ const PatientDetailDashboard = () => {
                     <td className="py-2">2 Jan, 2022</td>
                     <td className="py-2">Diarrhea</td>
                     <td className="py-2">
-                      <img src={viewIcon} alt="" />
+                      <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
                   </tr>
                   <tr className="border-t">
@@ -253,7 +264,7 @@ const PatientDetailDashboard = () => {
                     <td className="py-2">2 Jan, 2022</td>
                     <td className="py-2">Colds and Flu</td>
                     <td className="py-2">
-                      <img src={viewIcon} alt="" />
+                      <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
                   </tr>
                 </tbody>
@@ -263,9 +274,9 @@ const PatientDetailDashboard = () => {
         </div>
       </div>
 
-      <div className="p-4 md:p-6  ">
+      <div className="p-4   ">
         <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
-          <div className="w-full lg:w-2/3 bg-white p-4 md:p-6 rounded-lg shadow-md">
+          <div className="w-full lg:w-2/3 bg-white p-4  rounded-lg shadow-md">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg md:text-xl font-bold">Test Reports</h2>
               <button
@@ -274,8 +285,8 @@ const PatientDetailDashboard = () => {
                   navigate("/personalhealthrecord/patientstestreports")
                 }
               >
-                View All Reports
-              </button>
+                View All Reports        
+              </button>
             </div>
             <div className="gap-4 grid grid-cols-2 ">
               {[
