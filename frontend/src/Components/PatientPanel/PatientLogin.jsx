@@ -66,7 +66,7 @@ const PatientLogin = () => {
         localStorage.setItem("PatientToken", result.token);
         toast.success("Login successful! Redirecting...");
         // navigate("/patientlogin");
-        navigate("/personalhealthrecord");
+        navigate("/personalhealthrecord/patientdetaildashboard");
       } else {
         toast.error(result.message || "Login failed, please try again.");
         setErrors({
