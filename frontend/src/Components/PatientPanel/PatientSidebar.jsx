@@ -17,7 +17,8 @@ const PatientSidebar = ({ isSidebarOpen, toggleSidebar }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/doctor/doctorlogin");
+    localStorage.removeItem("PatientToken");
+    navigate("/Patientlogin");
   };
 
   return (
@@ -26,6 +27,7 @@ const PatientSidebar = ({ isSidebarOpen, toggleSidebar }) => {
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       } md:translate-x-0 md:relative md:shadow-none md:h-auto`}
     >
+      {/* Close Button - Only visible on small screens */}
       <button
         className="md:hidden absolute top-4 right-4 p-2 focus:outline-none"
         onClick={toggleSidebar}
@@ -60,7 +62,7 @@ const PatientSidebar = ({ isSidebarOpen, toggleSidebar }) => {
             </li>
             <li>
               <NavLink
-                to="/appointmentbooking/patientmyappointment"
+                to="/appointmentbooking"
                 className={({ isActive }) =>
                   `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${
                     isActive
