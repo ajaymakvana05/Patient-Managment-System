@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PatientAppointmentBooking = () => {
   const [showPopup, setShowPopup] = React.useState(false);
+  const [patientIssue, setPatientIssue] = useState("");
+  const [diseaseName, setDiseaseName] = useState("");
+  const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate();
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!patientIssue) {
+      newErrors.patientIssue = "Patient Issue is required.";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      navigate("/appointmentbooking/patientaappointmentbookinginvoice");
+    }
+  };
   return (
     <div className="p-4 md:p-8 bg-gray-100 min-h-screen">
       <div className="max-w-7xl mx-auto bg-white p-4 md:p-6 rounded-lg shadow-lg">
@@ -156,53 +178,79 @@ const PatientAppointmentBooking = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
             <h2 className="text-xl font-bold mb-4">Appointment</h2>
-            <div className="mb-4">
+            <div className="mb-4 flex justify-between">
               <label className="block text-gray-700">Appointment Type</label>
               <span className="inline-block bg-yellow-100 text-yellow-700 rounded-full px-3 py-1 text-sm font-semibold">
                 Online
               </span>
             </div>
-            <div className="mb-4">
+            <div className="mb-4 flex justify-between">
               <label className="block text-gray-700">Patient Name</label>
               <p>John deo</p>
             </div>
-            <div className="mb-4">
+            <div className="mb-4 flex justify-between">
               <label className="block text-gray-700">Appointment Date</label>
               <p>19 June, 2022</p>
             </div>
-            <div className="mb-4">
+            <div className="mb-4 flex justify-between">
               <label className="block text-gray-700">Appointment Time</label>
               <p>11:00AM - 12:00 PM</p>
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-700">Patient Issue</label>
-              <input
-                type="text"
-                className="border border-gray-300 rounded p-2 w-full"
-                placeholder="Enter Patient Issue"
-              />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-700">
-                Disease Name <span className="text-gray-500">(Optional)</span>
-              </label>
-              <input
-                type="text"
-                className="border border-gray-300 rounded p-2 w-full"
-                placeholder="Enter Disease Name"
-              />
-            </div>
-            <div className="flex justify-end">
-              <button
-                className="bg-gray-200 text-gray-700 rounded px-4 py-2 mr-2"
-                onClick={() => setShowPopup(false)}
-              >
-                Cancel
-              </button>
-              <button className="bg-blue text-white rounded px-4 py-2">
-                Book Appointment
-              </button>
-            </div>
+
+            <form onSubmit={handleFormSubmit}>
+              <div className="mb-4 relative">
+                <input
+                  type="text"
+                  id="patient-issue"
+                  value={patientIssue}
+                  onChange={(e) => setPatientIssue(e.target.value)}
+                  className="peer border border-gray-300 rounded p-2 w-full placeholder-transparent focus:outline-none focus:border-blue-500"
+                  placeholder="Enter Patient Issue"
+                />
+                <label
+                  htmlFor="patient-issue"
+                  className="absolute left-2 -top-2.5 text-gray-600 text-sm bg-white px-1 transition-all peer-focus:text-sm"
+                >
+                  Patient Issue
+                </label>
+                {errors.patientIssue && (
+                  <p className="text-redtext-sm">{errors.patientIssue}</p>
+                )}
+              </div>
+
+              <div className="mb-4 relative">
+                <input
+                  type="text"
+                  id="disease-name"
+                  value={diseaseName}
+                  onChange={(e) => setDiseaseName(e.target.value)}
+                  className="peer border border-gray-300 rounded p-2 w-full placeholder-transparent focus:outline-none focus:border-blue-500"
+                  placeholder="Enter Disease Name"
+                />
+                <label
+                  htmlFor="disease-name"
+                  className="absolute left-2 -top-2.5 text-gray-600 text-sm bg-white px-1 transition-all peer-focus:text-sm"
+                >
+                  Disease Name <span className="text-gray-500">(Optional)</span>
+                </label>
+              </div>
+
+              <div className="flex justify-end">
+                <button
+                  type="button"
+                  className="bg-gray-200 text-gray-700 rounded px-4 py-2 mr-2"
+                  onClick={() => setShowPopup(false)}
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="bg-blue text-white rounded px-4 py-2"
+                >
+                  Book Appointment
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

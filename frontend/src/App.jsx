@@ -78,6 +78,7 @@ import AppointmentBooking from "./pages/patient/AppointmentBooking.jsx";
 import PatientMyAppointment from "./Components/PatientPanel/PatientMyAppointment.jsx";
 import PatientAppointmentBooking from "./Components/PatientPanel/PatientAppointmentBooking.jsx";
 import PatientAppointmentTimeSlot from "./Components/PatientPanel/PatientAppointmentTimeSlot.jsx";
+import PatientAppointmentBookingInvoice from "./Components/PatientPanel/PatientAppointmentBookingInvoice.jsx";
 
 const App = () => {
   return (
@@ -606,6 +607,14 @@ const App = () => {
                 element={
                   <PatientProtect>
                     <PatientAppointmentTimeSlot />
+                  </PatientProtect>
+                }
+              />
+              <Route
+                path="patientaappointmentbookinginvoice"
+                element={
+                  <PatientProtect>
+                    <PatientAppointmentBookingInvoice />
                   </PatientProtect>
                 }
               />
