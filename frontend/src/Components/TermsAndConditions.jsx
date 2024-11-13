@@ -58,7 +58,7 @@ const TermsAndConditions = () => {
           <input
             id="accept-terms"
             type="checkbox"
-            className="w-5 h-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            className="w-5 h-5 text-blue focus:ring-blue-500 border-gray-300 rounded"
             onChange={() => setIsAccepted(!isAccepted)}
           />
           <label htmlFor="accept-terms" className="ml-2 text-gray-700">

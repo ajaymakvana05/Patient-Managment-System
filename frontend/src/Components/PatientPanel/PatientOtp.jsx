@@ -116,7 +116,7 @@ const PatientOtp = () => {
             <button
               type="button"
               onClick={handleResendOtp}
-              className="w-full text-white py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition-colors mb-4"
+              className="w-full text-white py-2 rounded-lg bg-blue hover:bg-blue transition-colors mb-4"
             >
               Resend OTP
             </button>
@@ -125,7 +125,7 @@ const PatientOtp = () => {
           <button
             type="submit"
             onClick={handleRequestOtp}
-            className="w-full bg-gray-300 text-gray-700 py-2 rounded-lg hover:bg-blue-500 transition-colors"
+            className="w-full bg-gray-300 text-gray-700 py-2 rounded-lg hover:bg-blue transition-colors"
           >
             Verify OTP
           </button>

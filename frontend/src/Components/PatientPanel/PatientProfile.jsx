@@ -99,8 +99,8 @@ const PatientProfile = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-4"
           onSubmit={handleSubmit}
         >
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Name</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Name</label>
             <input
               type="text"
               name="name"
@@ -109,127 +109,127 @@ const PatientProfile = () => {
                 const [first, last] = e.target.value.split(" ");
                 setFormData({ ...formData, firstname: first || "", lastname: last || "" });
               }}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none "
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Number</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Number</label>
             <input
               type="text"
               name="phonenumber"
               value={formData.phonenumber}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none   "
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Email</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Email</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Gender</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Gender</label>
             <input
               type="text"
               name="gender"
               value={formData.gender}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">DOB</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4   scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">DOB</label>
             <input
               type="text"
               name="dateofbirth"
               value={formData.dateofbirth ? formData.dateofbirth.split('T')[0] : ""}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Age</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Age</label>
             <input
               type="text"
               name="age"
               value={formData.age}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Blood Group</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Blood Group</label>
             <input
               type="text"
               name="BloodGroup"
               value={formData.BloodGroup}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Height (Cm)</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Height (Cm)</label>
             <input
               type="text"
               name="height"
               value={formData.height}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Weight (Kg)</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Weight (Kg)</label>
             <input
               type="text"
               name="weight"
               value={formData.weight}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">Country</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Country</label>
             <input
               type="text"
               name="country"
               value={formData.country}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">State</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">State</label>
             <input
               type="text"
               name="state"
               value={formData.state}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none "
             />
           </div>
-          <div className="col-span-1 md:col-span-1">
-            <label className="block text-gray-700">City</label>
+          <div className="col-span-1 md:col-span-1 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">City</label>
             <input
               type="text"
               name="city"
               value={formData.city}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
-          <div className="col-span-1 md:col-span-3">
-            <label className="block text-gray-700">Address</label>
+          <div className="col-span-1 md:col-span-3 relative">
+            <label className="absolute top-2 left-1 z-10 origin-[0] -translate-y-4  scale-75 transform cursor-text select-none bg-white px-2 text-base text-black font-medium duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 ">Address</label>
             <input
               type="text"
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+              className="w-full border rounded-lg px-3 py-2 placeholder:text-sm placeholder:text-grey placeholder:font-normal outline-none"
             />
           </div>
           <div className="col-span-1 md:col-span-3 flex justify-end space-x-4 mt-4">

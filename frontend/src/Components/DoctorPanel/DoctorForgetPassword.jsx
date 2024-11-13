@@ -81,7 +81,7 @@ const DoctorForgetPassword = () => {
 
             <button
               type="submit"
-              className="w-full bg-greyLightest text-greyDark py-2 rounded-lg hover:bg-blue-600 transition-colors"
+              className="w-full bg-greyLightest text-greyDark py-2 rounded-lg hover:bg-blue transition-colors"
             >
               Get OTP
             </button>

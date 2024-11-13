@@ -105,7 +105,7 @@ const DoctorPatientRecordAccessTable = () => {
                 <td className="py-2 px-4">{patient.issue}</td>
                 <td className="py-2 px-4">{patient.lastAppointmentDate}</td>
                 <td className="py-2 px-4">
-                  <span className="bg-gray-200 text-blue-600 px-3 py-1 rounded-full font-semibold">
+                  <span className="bg-gray-200 text-blue px-3 py-1 rounded-full font-semibold">
                     {patient.lastAppointmentTime}
                   </span>
                 </td>

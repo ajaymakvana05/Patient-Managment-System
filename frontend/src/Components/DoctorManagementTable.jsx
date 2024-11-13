@@ -254,7 +254,7 @@ const DoctorManagementTable = () => {
                 No
               </button>
               <button
-                className="bg-red text-white px-4 py-2 rounded hover:bg-blue-600"
+                className="bg-red text-white px-4 py-2 rounded hover:bg-blue"
                 onClick={handleConfirmDelete}
               >
                 Yes
@@ -287,7 +287,7 @@ const DoctorManagementTable = () => {
             />
           </div>
           <button
-            className="bg-blue text-white px-4 py-2 rounded hover:bg-blue-600"
+            className="bg-blue text-white px-4 py-2 rounded hover:bg-blue"
             onClick={() => navigate("/adddoctorform")}
           >
             Add New Doctor

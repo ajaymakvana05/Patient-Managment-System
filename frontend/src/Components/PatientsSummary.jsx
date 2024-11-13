@@ -47,9 +47,9 @@ const PatientsSummary = () => {
       tooltip: {
         enabled: true,
       },
-      centerTextPlugin, // Register the custom plugin here
+      centerTextPlugin, 
     },
-    cutout: "70%", // This creates the hollow area in the doughnut chart
+    cutout: "70%", 
   };
 
   return (
@@ -61,6 +61,7 @@ const PatientsSummary = () => {
             data={data}
             options={options}
             plugins={[centerTextPlugin]}
+            style={{width:""}}
           />
         </div>
         <div className="flex flex-col items-start justify-center ml-4">

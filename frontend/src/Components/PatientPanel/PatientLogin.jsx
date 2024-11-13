@@ -163,7 +163,7 @@ const PatientLogin = () => {
               </div>
               <Link
                 to="/doctorforgetpassword"
-                className="text-sm text-blue-600 hover:underline"
+                className="text-sm text-blue hover:underline"
               >
                 Forgot Password?
               </Link>
@@ -171,7 +171,7 @@ const PatientLogin = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue text-white py-3 rounded-lg hover:bg-blue-600 transition-colors"
+              className="w-full bg-blue text-white py-3 rounded-lg hover:bg-blue transition-colors"
             >
               Login
             </button>

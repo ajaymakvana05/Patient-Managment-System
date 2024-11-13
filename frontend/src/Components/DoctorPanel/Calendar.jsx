@@ -78,7 +78,7 @@ const Calendar = () => {
               />
               <button
                 type="submit"
-                className="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
+                className="mt-4 w-full bg-blue text-white py-2 rounded hover:bg-blue transition duration-200"
               >
                 Add Event
               </button>

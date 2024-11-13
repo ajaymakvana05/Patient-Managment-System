@@ -70,24 +70,24 @@ const BillingPayments = () => {
       <p className="text-status-unpaid mb-4 font-semibold">
         ● Pending Bills: 50
       </p>
-      <div className="overflow-x-scroll w-full">
+      <div className="overflow-x-scroll w-full h-full">
         {/* Ensures horizontal scroll */}
-        <table className="min-w-full bg-background-white shadow-md rounded-lg">
+        <table className="min-w-full h-full bg-background-white shadow-md rounded-lg">
           <thead>
             <tr>
-              <th className="py-2 px-2 bg-background-light text-left font-medium">
+              <th className="py-2 px-2 bg-background-light text-left font-medium text-sm	">
                 Bill No
               </th>
-              <th className="py-2 px-2 bg-background-light text-left font-medium">
+              <th className="py-2 px-2 bg-background-light text-left font-medium text-sm	">
                 Patient Name
               </th>
-              <th className="py-2 px-2 bg-background-light text-left font-medium">
+              <th className="py-2 px-2 bg-background-light text-left font-medium text-sm	">
                 Disease Name
               </th>
-              <th className="py-2 px-2 bg-background-light text-left font-medium">
+              <th className="py-2 px-2 bg-background-light text-left font-medium text-sm	">
                 Status
               </th>
-              <th className="py-2 px-2 bg-background-light text-left font-medium">
+              <th className="py-2 px-2 bg-background-light text-left font-medium text-sm	">
                 Action
               </th>
             </tr>
@@ -95,14 +95,14 @@ const BillingPayments = () => {
           <tbody>
             {bills.map((bill, index) => (
               <tr key={index} className="border-b hover:bg-gray-100">
-                <td className="py-2 px-2 text-primary hover:underline cursor-pointer">
+                <td className="py-2 px-2 text-xs	 text-primary hover:underline cursor-pointer">
                   {bill.billNo}
                 </td>
-                <td className="py-2 px-2">{bill.patient}</td>
-                <td className="py-2 px-2">{bill.disease}</td>
-                <td className="py-2 px-2">
+                <td className="py-2 px-2 text-xs	">{bill.patient}</td>
+                <td className="py-2 px-2 text-xs	">{bill.disease}</td>
+                <td className="py-2 px-2 text-xs	">
                   <span
-                    className={`py-1 px-3 rounded-full text-white text-sm ${
+                    className={`py-1 px-3 rounded-full text-white  text-xs	 ${
                       bill.status === "Paid"
                         ? "bg-status-paid"
                         : "bg-status-unpaid"
@@ -112,7 +112,7 @@ const BillingPayments = () => {
                   </span>
                 </td>
                 <td className="py-2 px-2 text-center">
-                  <button className="text-primary hover:text-primary-dark">
+                  <button className="text-primary hover:text-primary-dark text-xs	">
                     <FaEye size={18} />
                   </button>
                 </td>

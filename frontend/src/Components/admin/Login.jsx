@@ -103,7 +103,7 @@ const Login = () => {
               />
               <label
                 htmlFor="email"
-                className="absolute left-2.5 top-5 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:scale-75 peer-focus:text-blue-600"
+                className="absolute left-2.5 top-5 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:scale-75 peer-focus:text-blue"
               >
                 Email*
               </label>
@@ -125,7 +125,7 @@ const Login = () => {
               />
               <label
                 htmlFor="password"
-                className="absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:scale-75 peer-focus:text-blue-600"
+                className="absolute left-2.5 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:scale-75 peer-focus:text-blue"
               >
                 Password*
               </label>
@@ -142,7 +142,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue text-black py-3 rounded-lg hover:bg-blue-600 transition-colors"
+              className="w-full bg-blue text-black py-3 rounded-lg hover:bg-blue transition-colors"
             >
               Login
             </button>

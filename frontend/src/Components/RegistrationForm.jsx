@@ -340,7 +340,7 @@ const Register = () => {
             />
             <label className="text-sm">
               I accept the{" "}
-              <Link to="/terms" className="text-blue-600 hover:underline">
+              <Link to="/terms" className="text-blue hover:underline">
                 Terms and Conditions
               </Link>
               *
@@ -354,13 +354,13 @@ const Register = () => {
           )}
           <button
             type="submit"
-            className="w-full mt-4 bg-blue text-white py-2 rounded-lg hover:bg-blue-500 transition duration-200"
+            className="w-full mt-4 bg-blue text-white py-2 rounded-lg hover:bg-blue transition duration-200"
           >
             Register
           </button>
           <p className="mt-4 text-sm text-center">
             Already have an account?{" "}
-            <Link to="/login" className="text-blue-600 hover:underline">
+            <Link to="/login" className="text-blue hover:underline">
               Login here
             </Link>
           </p>

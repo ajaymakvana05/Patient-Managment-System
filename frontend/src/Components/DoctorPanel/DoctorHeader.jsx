@@ -34,7 +34,7 @@ const DoctorHeader = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <header className="w-full bg-blue-600 text-white p-4 flex justify-between items-center">
+    <header className="w-full bg-blue text-white p-4 flex justify-between items-center">
       {/* Toggle Sidebar Button */}
       <button onClick={toggleSidebar} className="md:hidden p-2">
         <span className="text-white text-2xl">&#9776;</span>{" "}
@@ -42,7 +42,7 @@ const DoctorHeader = ({ toggleSidebar }) => {
       </button>
 
       {/* Breadcrumb-like Component */}
-      <div className="flex items-center space-x-2 bg-gray-100 text-blue-600 py-1 px-3 rounded-full">
+      <div className="flex items-center space-x-2 bg-gray-100 text-blue py-1 px-3 rounded-full">
         <FaHome className="text-gray-500" /> {/* Home Icon */}
         <span className="text-gray-500">›</span> {/* Separator */}
         <span className="font-medium text-blue">Appointment Management</span>

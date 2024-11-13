@@ -8,21 +8,24 @@ const AppointmentCard = ({ name, doctor, disease, time, status }) => {
         <span
           className={`text-sm px-2 py-1 rounded-full ${
             status === "Onsite"
-              ? "bg-blue text-blue"
-              : "bg-yellow-100 text-yellow-600"
+              ? "bg-blue text-white"
+              : "bg-yellow-100 text-yellow"
           }`}
         >
           {status}
         </span>
       </div>
-      <p className="text-gray-600 mt-2">
-        <strong>Doctor Name:</strong> {doctor}
+        <span className="text-greyBlue font-normal font-Lato ">Doctor Name:</span> 
+      <p className="text-greyDark font-bold	 ">
+      {doctor}
       </p>
-      <p className="text-gray-600 mt-1">
-        <strong>Disease Name:</strong> {disease}
+      <span className="text-greyBlue font-normal font-Lato ">Disease Name:</span>
+      <p className="text-greyDark font-bold	 ">
+        {disease}
       </p>
-      <p className="text-gray-600 mt-1">
-        <strong>Appointment Time:</strong> {time}
+      <span className="text-greyBlue font-normal font-Lato ">Appointment Time:</span>
+      <p className="text-greyDark font-bold	 ">
+         {time}
       </p>
     </div>
   );

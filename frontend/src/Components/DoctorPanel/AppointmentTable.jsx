@@ -160,7 +160,7 @@ const AppointmentTable = () => {
                 <td className="py-3 px-6 text-left">{appointment.date}</td>
 
                 <td className="py-3 px-6 text-left">
-                  <span className="py-1 px-3 rounded-full text-xs bg-gray-200 text-blue-600">
+                  <span className="py-1 px-3 rounded-full text-xs bg-gray-200 text-blue">
                     {appointment.time}
                   </span>
                 </td>
@@ -170,7 +170,7 @@ const AppointmentTable = () => {
                     className={`py-1 px-3 rounded-full text-xs ${
                       appointment.type === "Online"
                         ? "bg-yellow-100 text-yellow-600"
-                        : "bg-blue-100 text-blue-600"
+                        : "bg-blue-100 text-blue"
                     }`}
                   >
                     {appointment.type}

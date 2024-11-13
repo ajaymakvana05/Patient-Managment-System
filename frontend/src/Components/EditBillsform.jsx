@@ -44,7 +44,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Patient Name
             </label>
           </div>
@@ -58,7 +58,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Phone Number
             </label>
           </div>
@@ -72,7 +72,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Gender
             </label>
           </div>
@@ -86,7 +86,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Age
             </label>
           </div>
@@ -100,7 +100,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Doctor Name
             </label>
           </div>
@@ -114,7 +114,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Disease Name
             </label>
           </div>
@@ -129,12 +129,12 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Description
             </label>
           </div>
           <div className="relative">
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Payment Type
             </label>
             <select
@@ -158,7 +158,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Bill Date
             </label>
           </div>
@@ -171,7 +171,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Bill Time
             </label>
           </div>
@@ -185,7 +185,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Bill Number
             </label>
           </div>
@@ -198,7 +198,7 @@ const EditBillsform = () => {
               placeholder=" "
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Discount (%)
             </label>
           </div>
@@ -211,7 +211,7 @@ const EditBillsform = () => {
               placeholder=" "
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Tax
             </label>
           </div>
@@ -225,7 +225,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Amount
             </label>
           </div>
@@ -239,7 +239,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Total Amount
             </label>
           </div>
@@ -254,7 +254,7 @@ const EditBillsform = () => {
               className="border rounded-lg px-4 py-2 w-full peer focus:outline-none focus:ring-2 focus:ring-[#A7A7A7]"
               required
             />
-            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+            <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
               Address
             </label>
           </div>

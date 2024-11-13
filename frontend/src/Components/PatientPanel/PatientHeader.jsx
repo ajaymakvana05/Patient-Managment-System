@@ -50,7 +50,7 @@ const PatientHeader = ({ toggleSidebar }) => {
         <FaBars size={24} />
       </button>
 
-      <div className="hidden md:flex items-center space-x-2 bg-gray-100 text-blue-600 py-1 px-3 rounded-full">
+      <div className="hidden md:flex items-center space-x-2 bg-gray-100 text-blue py-1 px-3 rounded-full">
         <FaHome className="text-gray-500" />
 
         <span className="hidden md:inline-block text-gray-500">›</span>

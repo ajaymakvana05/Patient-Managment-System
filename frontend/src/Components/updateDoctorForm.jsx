@@ -503,7 +503,7 @@ const UodateDoctorForm = () => {
               </div>
 
               <div className="flex justify-end">
-                <button type="submit" className="bg-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+                <button type="submit" className="bg-blue text-white px-6 py-2 rounded-lg hover:bg-blue">
                   Update Doctor
                 </button>
               </div>

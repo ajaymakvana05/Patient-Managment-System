@@ -7,7 +7,7 @@ export default {
         xxs: "10px",
         xs: "12px",
         sm: "14px",
-        base: "16px",
+        // base: "16px",
         lg: "18px",
         xl: "20px",
         "2xl": "24px",
@@ -35,7 +35,7 @@ export default {
         },
         text: {
           dark: "#111827",
-          muted: "#6b7280", // Muted gray text for secondary information
+          muted: "#6b7280", 
         },
         white: "#FFFFFF",
         liner: "#605BFF",
@@ -48,7 +48,7 @@ export default {
         greyLight: "#D3D3D3",
         greyLighter: "#F4F4F4",
         greyLightest: "#F6F8FB",
-        black: "#141414",
+        black: "#030229",
         green: "#39973D",
         red: "#E74C3C",
         link: "#5678E9",

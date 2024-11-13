@@ -13,7 +13,7 @@ const BillingDashboard = () => {
         <Outlet></Outlet>
         {/* <div className="flex flex-col md:flex-row gap-6 p-4">
           <div className="bg-white rounded-lg shadow-lg p-6 w-full md:w-1/4 flex items-center justify-center">
-            <button className="bg-blue text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
+            <button className="bg-blue text-white py-2 px-4 rounded-lg hover:bg-blue transition duration-300">
               Choose Template
             </button>
           </div>

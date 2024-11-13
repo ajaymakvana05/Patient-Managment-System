@@ -60,7 +60,7 @@ const AppointmentPopup = ({ appointment, isOpen, onClose }) => {
               Cancel
             </button>
             <button
-              className="bg-blue text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-blue text-white px-4 py-2 rounded hover:bg-blue"
               onClick={handleJoinCall}
             >
               Join

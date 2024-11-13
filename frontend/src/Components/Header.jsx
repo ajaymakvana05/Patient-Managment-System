@@ -30,7 +30,7 @@ const Header = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <header className="w-full bg-blue-600 text-white p-4 flex justify-between items-center">
+    <header className="w-full bg-blue text-white p-4 flex justify-between items-center">
      
 
       <h1 className="text-lg sm:text-xl md:text-2xl font-bold">

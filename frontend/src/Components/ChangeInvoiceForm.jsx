@@ -122,7 +122,7 @@ const ChangeInvoiceForm = () => {
                   <img src={UploadIcon} alt="Upload Icon" className="mb-2" />
                 )}
                 <p className="text-blue-500 font-medium text-sm">
-                  <span className="text-blue-600 font-medium">
+                  <span className="text-blue font-medium">
                     Upload a file{" "}
                   </span>
                   or drag and drop
@@ -142,7 +142,7 @@ const ChangeInvoiceForm = () => {
               <div className="w-full mt-2">
                 <div className="bg-gray-200 rounded-full h-2">
                   <div
-                    className="bg-blue-500 h-2 rounded-full"
+                    className="bg-blue h-2 rounded-full"
                     style={{ width: `${uploadProgress}%` }}
                   ></div>
                 </div>
@@ -161,7 +161,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5 bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Enter Name
                 </label>
               </div>
@@ -174,7 +174,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Enter Other Text
                 </label>
               </div>
@@ -187,7 +187,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Enter Email
                 </label>
               </div>
@@ -202,7 +202,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Select Date
                 </label>
               </div>
@@ -215,7 +215,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Select Time
                 </label>
               </div>
@@ -228,7 +228,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Enter Bill Number
                 </label>
               </div>
@@ -243,7 +243,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Enter Phone Number
                 </label>
               </div>
@@ -256,7 +256,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Enter Address
                 </label>
               </div>
@@ -269,7 +269,7 @@ const ChangeInvoiceForm = () => {
                   onChange={handleFileChange}
                   required
                 />
-                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue-600">
+                <label className="absolute left-4 -top-2.5  bg-white text-gray-600 transition-all duration-200 transform scale-75 origin-top-left peer-placeholder-shown:top-2.5 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-focus:-top-2.5 peer-focus:left-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-base peer-focus:text-blue">
                   Enter Description
                 </label>
               </div>
@@ -282,7 +282,7 @@ const ChangeInvoiceForm = () => {
         <div className="flex justify-between items-center">
           <h3 className="text-xl font-semibold mb-4">Patient Details</h3>
           <button
-            className="mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            className="mb-4 bg-blue text-white px-4 py-2 rounded hover:bg-blue"
             onClick={handleModalToggle}
           >
             + Add New Field
@@ -441,7 +441,7 @@ const ChangeInvoiceForm = () => {
         </div>
       </div>
 
-      <button className="bg-blue w-[100px] ml-auto mt-2 text-white px-4 py-2 rounded hover:bg-blue-600">
+      <button className="bg-blue w-[100px] ml-auto mt-2 text-white px-4 py-2 rounded hover:bg-blue">
         Save
       </button>
 

@@ -74,7 +74,7 @@ const PatientResetPassword = () => {
               />
               <label
                 htmlFor="newPassword"
-                className="absolute left-2.5  z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm font-medium text-gray-500 duration-500 peer-placeholder-shown:top-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:scale-75 peer-focus:text-blue-600"
+                className="absolute left-2.5  z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm font-medium text-gray-500 duration-500 peer-placeholder-shown:top-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:scale-75 peer-focus:text-blue"
               >
                 New Password*
               </label>
@@ -97,7 +97,7 @@ const PatientResetPassword = () => {
               />
               <label
                 htmlFor="confirmPassword"
-                className="absolute left-2.5  z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm font-medium text-gray-500 duration-500 peer-placeholder-shown:top-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:scale-75 peer-focus:text-blue-600"
+                className="absolute left-2.5  z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm font-medium text-gray-500 duration-500 peer-placeholder-shown:top-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:scale-75 peer-focus:text-blue"
               >
                 Confirm Password*
               </label>
@@ -110,7 +110,7 @@ const PatientResetPassword = () => {
 
             <button
               type="submit"
-              className="w-full bg-greyLightest text-greyDark py-3 rounded-lg hover:bg-blue-600 transition-colors"
+              className="w-full bg-greyLightest text-greyDark py-3 rounded-lg hover:bg-blue transition-colors"
             >
               Reset Password
             </button>

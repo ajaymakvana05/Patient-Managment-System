@@ -91,7 +91,7 @@ const BillingDetailsTable = () => {
               filteredBills.map((bill) => (
                 <tr key={bill.id} className="border-b hover:bg-gray-100">
                   <td className="p-3">
-                    <span className="bg-blue-100 text-blue-600 py-1 px-3 rounded-full">
+                    <span className="bg-blue-100 text-blue py-1 px-3 rounded-full">
                       {bill.billNumber}
                     </span>
                   </td>

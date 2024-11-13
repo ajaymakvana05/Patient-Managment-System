@@ -82,7 +82,7 @@ const CreateBillForm = () => {
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-semibold mb-4">Hospital Details</h3>
               <button
-                className="mb-4 bg-blue text-white px-4 py-2 rounded hover:bg-blue-600"
+                className="mb-4 bg-blue text-white px-4 py-2 rounded hover:bg-blue"
                 onClick={handleModalToggle}
               >
                 + Add New Field
@@ -142,7 +142,7 @@ const CreateBillForm = () => {
                   <div className="w-full mt-2">
                     <div className="bg-gray-200 rounded-full h-2">
                       <div
-                        className="bg-blue-500 h-2 rounded-full"
+                        className="bg-blue h-2 rounded-full"
                         style={{ width: `${uploadProgress}%` }}
                       ></div>
                     </div>
@@ -250,7 +250,7 @@ const CreateBillForm = () => {
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-semibold mb-4">Patient Details</h3>
               <button
-                className="mb-4 bg-blue text-white px-4 py-2 rounded hover:bg-blue-600"
+                className="mb-4 bg-blue text-white px-4 py-2 rounded hover:bg-blue"
                 onClick={handleModalToggle}
               >
                 + Add New Field
@@ -349,7 +349,7 @@ const CreateBillForm = () => {
           </div>
 
           {/* Save Button */}
-          <button className="bg-blue w-[100px] ml-auto mt-2 text-white px-4 py-2 rounded hover:bg-blue-600">
+          <button className="bg-blue w-[100px] ml-auto mt-2 text-white px-4 py-2 rounded hover:bg-blue">
             Save
           </button>
         </div>
