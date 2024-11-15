@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaCalendarAlt , FaTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import CalIconred from "../../assets/images/cal-red.svg";
 import CalIconblue from "../../assets/images/cal-blue.svg";
@@ -201,25 +201,17 @@ const AppointmentTable = () => {
 
       {isDeleteModalOpen && selectedAppointment && (
         <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded shadow-lg w-[400px] relative">
-            <h3 className="text-xl font-semibold mb-4">Confirm Delete</h3>
-            <p>
-              Are you sure you want to delete the appointment for{" "}
-              {selectedAppointment.patientName}?
-            </p>
-            <div className="flex justify-between mt-4">
-              <button
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700"
-                onClick={handleConfirmDelete}
-              >
-                Yes, Delete
-              </button>
-              <button
-                className="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400"
-                onClick={() => setDeleteModalOpen(false)}
-              >
-                Cancel
-              </button>
+            <div className="bg-white  rounded-lg shadow-lg p-6 text-center max-w-sm w-[300px]">
+            <div className="flex justify-center mb-4">
+              <div className="bg-red p-4 rounded-full">
+              <FaTrashAlt className="text-white text-2xl" />
+              </div>
+            </div>
+            <h2 className="text-xl font-bold text-gray-800 mb-2">Delete Time Slot ?</h2>
+            <p className="text-gray-500 mb-6">This slot is to be deleted ?</p>
+            <div className="flex justify-center space-x-4 p-6">
+              <button className="bg-white border border-gray-300 text-grey py-2 px-6 rounded-lg w-1/2">No</button>
+              <button className="bg-blue text-white py-2 px-6 rounded-lg w-1/2">Yes</button>
             </div>
           </div>
         </div>

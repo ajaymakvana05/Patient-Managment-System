@@ -91,7 +91,7 @@ const PatientProfileSidebar = () => {
         <img
           src={image || formData?.imageUrl || "https://via.placeholder.com/100"}
           alt="Profile"
-          className="w-24 h-24 rounded-full mb-4 cursor-pointer"
+          className="w-[150px] h-[150px] rounded-full mb-4 cursor-pointer"
           onClick={handleImageClick}
         />
         <h2 className="text-xl font-semibold">
