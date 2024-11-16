@@ -104,7 +104,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="firstname"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 First Name
               </label>
@@ -123,7 +123,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="lastname"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 Last Name
               </label>
@@ -142,7 +142,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="email"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 Email Address
               </label>
@@ -161,7 +161,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="phonenumber"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 Phone Number
               </label>
@@ -180,7 +180,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="hospitalName"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 Hospital Name
               </label>
@@ -199,7 +199,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="gender"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 Gender
               </label>
@@ -218,7 +218,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="city"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 City
               </label>
@@ -237,7 +237,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="state"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 State
               </label>
@@ -256,7 +256,7 @@ const Profile = () => {
               />
               <label
                 htmlFor="country"
-                className="absolute top-0 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
+                className="absolute  top-1 left-4 -translate-y-4 bg-white px-1 text-sm font-medium text-gray-600"
               >
                 Country
               </label>

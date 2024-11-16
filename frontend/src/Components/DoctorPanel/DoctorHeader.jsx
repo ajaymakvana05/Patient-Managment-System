@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import profileIcon from "../../assets/images/profile.svg";
 import SearchBarWithDropdown from "../SearchBarWithDropdown";
 import Notification from "../Notification";
-import { FaHome } from "react-icons/fa"; // Using a home icon from React Icons
+import { FaHome } from "react-icons/fa";
 
 const DoctorHeader = ({ toggleSidebar }) => {
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ const DoctorHeader = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <header className="w-full bg-blue text-white p-4 flex justify-between items-center">
+    <header className="w-full text-white p-4 flex justify-between items-center">
       {/* Toggle Sidebar Button */}
       <button onClick={toggleSidebar} className="md:hidden p-2">
         <span className="text-white text-2xl">&#9776;</span>{" "}
@@ -43,8 +43,8 @@ const DoctorHeader = ({ toggleSidebar }) => {
 
       {/* Breadcrumb-like Component */}
       <div className="flex items-center space-x-2 bg-gray-100 text-blue py-1 px-3 rounded-full">
-        <FaHome className="text-gray-500" /> {/* Home Icon */}
-        <span className="text-gray-500">›</span> {/* Separator */}
+        <FaHome className="text-gray-500" /> 
+        <span className="text-gray-500">›</span> 
         <span className="font-medium text-blue">Appointment Management</span>
       </div>
 

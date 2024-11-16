@@ -3,6 +3,7 @@ import { FaCalendarAlt , FaTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import CalIconred from "../../assets/images/cal-red.svg";
 import CalIconblue from "../../assets/images/cal-blue.svg";
+import notfoundicon from "../../assets/images/notfound.svg"
 
 const AppointmentTable = () => {
   const [activeTab, setActiveTab] = useState("Today Appointment");
@@ -11,36 +12,37 @@ const AppointmentTable = () => {
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
   const [selectedAppointment, setSelectedAppointment] = useState(null);
+  
   const navigate = useNavigate();
 
   const appointmentData = [
-    {
-      id: 1,
-      patientName: "Marcus Philips",
-      disease: "Viral Infection",
-      issue: "Stomach Ache",
-      date: "2 Jan, 2022",
-      time: "4:30 PM",
-      type: "Online",
-    },
-    {
-      id: 2,
-      patientName: "Julianna Warren",
-      disease: "Diabetes",
-      issue: "Stomach Ache",
-      date: "3 Jan, 2022",
-      time: "2:40 PM",
-      type: "Onsite",
-    },
-    {
-      id: 3,
-      patientName: "Julianna Warren",
-      disease: "Diabetes",
-      issue: "Feeling Tired",
-      date: "4 Jan, 2022",
-      time: "6:30 PM",
-      type: "Online",
-    },
+    // {
+    //   id: 1,
+    //   patientName: "Marcus Philips",
+    //   disease: "Viral Infection",
+    //   issue: "Stomach Ache",
+    //   date: "2 Jan, 2022",
+    //   time: "4:30 PM",
+    //   type: "Online",
+    // },
+    // {
+    //   id: 2,
+    //   patientName: "Julianna Warren",
+    //   disease: "Diabetes",
+    //   issue: "Stomach Ache",
+    //   date: "3 Jan, 2022",
+    //   time: "2:40 PM",
+    //   type: "Onsite",
+    // },
+    // {
+    //   id: 3,
+    //   patientName: "Julianna Warren",
+    //   disease: "Diabetes",
+    //   issue: "Feeling Tired",
+    //   date: "4 Jan, 2022",
+    //   time: "6:30 PM",
+    //   type: "Online",
+    // },
   ];
 
   const handleTabClick = (tabName) => {
@@ -147,7 +149,10 @@ const AppointmentTable = () => {
             </tr>
           </thead>
           <tbody className="text-gray-600 text-sm font-light">
-            {appointmentsToDisplay.map((appointment) => (
+            {appointmentsToDisplay.length > 0 ? (
+            
+            appointmentsToDisplay.map((appointment) => (
+
               <tr
                 key={appointment.id}
                 className="border-b border-gray-200 hover:bg-gray-100"
@@ -193,8 +198,22 @@ const AppointmentTable = () => {
                     </button>
                   </div>
                 </td>
+              </tr> 
+              ))
+            ) : (
+              <tr>
+                <td colSpan="7" className="py-6 text-center">
+                  <div className="flex flex-col items-center justify-center">
+                    <img
+                      src={notfoundicon}
+                      alt="No data found"
+                      className="h-24 w-24 mb-4"
+                    />
+                    <span className="text-gray-500">No appointments found</span>
+                  </div>
+                </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
@@ -210,12 +229,12 @@ const AppointmentTable = () => {
             <h2 className="text-xl font-bold text-gray-800 mb-2">Delete Time Slot ?</h2>
             <p className="text-gray-500 mb-6">This slot is to be deleted ?</p>
             <div className="flex justify-center space-x-4 p-6">
-              <button className="bg-white border border-gray-300 text-grey py-2 px-6 rounded-lg w-1/2">No</button>
+              <button className="bg-white border border-gray-300 text-grey py-2 px-6 rounded-lg w-1/2" onClick={() => setDeleteModalOpen(false)} >No</button>
               <button className="bg-blue text-white py-2 px-6 rounded-lg w-1/2">Yes</button>
             </div>
           </div>
         </div>
-      )}
+      ) }
 
       {/* Edit Modal */}
       {isEditModalOpen && selectedAppointment && (

@@ -79,6 +79,11 @@ import PatientMyAppointment from "./Components/PatientPanel/PatientMyAppointment
 import PatientAppointmentBooking from "./Components/PatientPanel/PatientAppointmentBooking.jsx";
 import PatientAppointmentTimeSlot from "./Components/PatientPanel/PatientAppointmentTimeSlot.jsx";
 import PatientAppointmentBookingInvoice from "./Components/PatientPanel/PatientAppointmentBookingInvoice.jsx";
+import PatientPrescriptionAccess from "./Components/PatientPanel/PatientPrescriptionAccess.jsx";
+import PrescriptionAccess from "./pages/patient/PrescriptionAccess.jsx";
+import PatientPrescriptionInvoice from "./Components/PatientPanel/PatientPrescriptionInvoice.jsx";
+// import PatientPrescriptionInvoice from "./Components/PatientPanel/PatientPrescriptionInvoice.jsx";
+
 
 const App = () => {
   return (
@@ -619,6 +624,35 @@ const App = () => {
                 }
               />
             </Route>
+            <Route
+              path="/prescriptionaccess"
+              element={
+                <PatientProtect>
+                  <PrescriptionAccess />
+                </PatientProtect>
+              }
+            >
+              <Route
+                index
+                path="patientprescriptionaccess"
+                element={
+                  <PatientProtect>
+                    <PatientPrescriptionAccess />
+                  </PatientProtect>
+                }
+              />
+              <Route
+                index
+                path="patientprescriptioninvoice"
+                element={
+                  <PatientProtect>
+                    <PatientPrescriptionInvoice />
+                  </PatientProtect>
+                }
+              />
+           
+            </Route>
+            
           </Routes>
         </div>
       </Router>

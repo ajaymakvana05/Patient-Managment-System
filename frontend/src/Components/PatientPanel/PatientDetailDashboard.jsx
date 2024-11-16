@@ -68,12 +68,12 @@ const PatientDetailDashboard = () => {
             </button>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-between w-[150px] h-[150px]">
+          <div className="flex flex-col sm:flex-row gap-6 justify-between">
             <div className="mb-4 sm:mb-0 flex justify-center sm:justify-start rounded-full">
               <img
                 src={formData?.imageUrl || "https://via.placeholder.com/100"}
                 alt="Profile"
-                className="rounded-full w-24 h-24"
+                className="rounded-full w-[150px] h-[150px]"
               />
             </div>
             <div className="sm:w-7/7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4 text-base	">

@@ -74,7 +74,7 @@ const DoctorPatientDetails = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-5">
-      <div className="bg-white">
+      <div className="bg-white p-6">
         <div className="flex justify-between mb-2">
           <h2 className="text-lg font-bold">Patient Details</h2>
           <button
@@ -177,7 +177,7 @@ const DoctorPatientDetails = () => {
             <div className="bg-white p-8 rounded shadow-lg max-w-sm w-full">
               <h3 className="text-lg font-bold mb-4">Add New Record</h3>
               <form>
-                {/* File Upload Section with Drag and Drop */}
+               
                 <div className="mb-4">
                   <label className="block text-gray-700">Upload File</label>
                   <div
@@ -250,7 +250,7 @@ const DoctorPatientDetails = () => {
       </div>
 
       {/* Appointments Table */}
-      <div className="mt-10 bg-white">
+      <div className="mt-10 bg-white p-6">
         <h3 className="text-lg font-bold">All Appointments</h3>
         <div className="overflow-auto">
           <table className="min-w-full table-auto border-collapse">
@@ -289,15 +289,15 @@ const DoctorPatientDetails = () => {
                     <span
                       className={`${
                         appointment.type === "Online"
-                          ? "text-yellow-500"
-                          : "text-blue-500"
+                          ? "text-yellow"
+                          : "text-blue"
                       }`}
                     >
                       {appointment.type}
                     </span>
                   </td>
                   <td className="px-4 py-2">
-                    <button className="text-blue-500 hover:underline">
+                    <button className="text-blue hover:underline">
                       View
                     </button>
                   </td>

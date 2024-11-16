@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { FaCalendarAlt, FaCaretDown } from "react-icons/fa";
-import { AiFillEye, AiOutlineClose } from "react-icons/ai";
+import { FaCalendarAlt, FaCaretDown, FaTimes } from "react-icons/fa";
+
+import { AiFillEye, AiFillCalendar } from "react-icons/ai";
 import PatientDoctorManagementPopUp from "./PatientDoctorManagementPopUp";
 import { useNavigate } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const PatientMyAppointment = () => {
   const [activeTab, setActiveTab] = useState("scheduled");
@@ -10,7 +13,19 @@ const PatientMyAppointment = () => {
   const [selectedAppointment, setSelectedAppointment] = useState(null);
   const navigate = useNavigate();
 
-  // Appointment data
+  const [iscancelOpen, setIsCancelOpen] = useState(false);
+
+  const opencancelPopup = () => setIsCancelOpen(true);
+  const closecancelPopup = () => setIsCancelOpen(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [startDate, setStartDate] = useState(new Date("2022-01-02"));
+  const [endDate, setEndDate] = useState(new Date("2022-01-13"));
+
+  const [fromDate, setFromDate] = useState(null);
+  const [toDate, setToDate] = useState(null);
+
+  const togglePopup = () => setIsOpen(!isOpen);
+
   const scheduledAppointments = [
     {
       doctor: "Nolan George",
@@ -145,9 +160,13 @@ const PatientMyAppointment = () => {
                 </>
               )}
               <div className="flex justify-between mt-4">
-                <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">
+                <button
+                  onClick={opencancelPopup}
+                  className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md"
+                >
                   Cancel
                 </button>
+
                 <button
                   onClick={() =>
                     navigate("/appointmentbooking/patientappointmenttimelot")
@@ -156,6 +175,38 @@ const PatientMyAppointment = () => {
                 >
                   Reschedule
                 </button>
+                {iscancelOpen && (
+                  <div className="fixed inset-0 flex items-center justify-center backdrop-blur-lg bg-opacity-50 z-50">
+                    <div className="bg-white rounded-lg shadow-lg p-6 w-80">
+                      <div className="flex justify-center mb-4">
+                        <div className="bg-red rounded-full p-3">
+                          <AiFillCalendar className="text-white text-2xl" />
+                        </div>
+                      </div>
+                      <h2 className="text-center text-xl font-bold text-gray-900 mb-2">
+                        Cancel Online Appointment ?
+                      </h2>
+                      <p className="text-center text-gray-600 mb-4">
+                        Are you sure to want to cancel this Appointment?
+                      </p>
+                      <div className="flex justify-between">
+                        <button
+                          onClick={() =>
+                            navigate(
+                              "/personalhealthrecord/patientdetaildashboard"
+                            )
+                          }
+                          className="bg-white border border-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg w-1/2 mr-2 "
+                        >
+                          No
+                        </button>
+                        <button className="bg-blue text-white font-semibold py-2 px-4 rounded-lg w-1/2 ml-2">
+                          Yes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -178,6 +229,11 @@ const PatientMyAppointment = () => {
     }
   };
 
+  const resetDates = () => {
+    setFromDate(null);
+    setToDate(null);
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="bg-white shadow-md rounded-lg p-4">
@@ -188,7 +244,7 @@ const PatientMyAppointment = () => {
                 key={tab}
                 className={`${
                   activeTab === tab
-                    ? "text-blue border-b-2 border-blue"
+                    ? "text-blue border-b-2 border-blue text-sm"
                     : "text-gray-500"
                 } pb-1`}
                 onClick={() => setActiveTab(tab)}
@@ -198,13 +254,82 @@ const PatientMyAppointment = () => {
             ))}
           </div>
           <div className="flex items-center space-x-2">
-            <div className="flex items-center border rounded-md lg:px-2 px-1 py-1">
-              <FaCalendarAlt className="text-gray-500" /> {/* Calendar Icon */}
-              <span className="ml-2 text-gray-700">
-                2 Jan, 2022 - 13 Jan, 2022
+            <div
+              className="flex items-center border rounded-md lg:px-2 px-1 py-1 cursor-pointer"
+              onClick={togglePopup}
+            >
+              <FaCalendarAlt className="text-gray-500" />
+              <span className="ml-2 text-gray-700 text-xs sm:text-sm">
+                {fromDate ? fromDate.toDateString() : "From Date"} -{" "}
+                {toDate ? toDate.toDateString() : "To Date"}
               </span>
-              <FaCaretDown className="text-gray-500 ml-2" />{" "}
+              <FaCaretDown className="text-gray-500 ml-2" />
             </div>
+
+            {/* Date Range Popup */}
+            {isOpen && (
+              <div className="fixed top-0 left-0 w-full h-full backdrop-blur-lg z-50 bg-opacity-50 flex justify-center items-center">
+                <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md relative">
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-xl font-bold text-indigo-900">
+                      Custom Date
+                    </h2>
+                    <button className="text-red-500" onClick={togglePopup}>
+                      <FaTimes size={20} />
+                    </button>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        From Date
+                      </label>
+                      <div className="relative">
+                        <DatePicker
+                          selected={fromDate}
+                          onChange={(date) => setFromDate(date)}
+                          placeholderText="Select Date"
+                          className="w-full border rounded-lg py-2 pl-3 pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        />
+                        <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                          <FaCalendarAlt className="text-gray-400" />
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        To Date
+                      </label>
+                      <div className="relative">
+                        <DatePicker
+                          selected={toDate}
+                          onChange={(date) => setToDate(date)}
+                          placeholderText="Select Date"
+                          className="w-full border rounded-lg py-2 pl-3 pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        />
+                        <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                          <FaCalendarAlt className="text-gray-400" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between">
+                    <button
+                      onClick={resetDates}
+                      className="w-1/2 bg-gray-100 text-gray-700 py-2 rounded-lg mr-2"
+                    >
+                      Reset
+                    </button>
+                    <button
+                      onClick={togglePopup}
+                      className="w-1/2 bg-indigo-100 text-gray-700 py-2 rounded-lg ml-2"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <button
               onClick={() =>
                 navigate("/appointmentbooking/patientappointmentbooking")
@@ -215,6 +340,7 @@ const PatientMyAppointment = () => {
             </button>
           </div>
         </div>
+
         <h2 className="text-xl font-bold mb-4">My Appointment</h2>
         {renderAppointments()}
       </div>

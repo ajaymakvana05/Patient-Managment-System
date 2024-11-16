@@ -79,7 +79,8 @@ const PatientSidebar = ({ isSidebarOpen, toggleSidebar }) => {
             </li>
             <li>
               <NavLink
-                to="/prescriptionaccess"
+                               to="/prescriptionaccess/patientprescriptionaccess"
+
                 className={({ isActive }) =>
                   `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${
                     isActive
