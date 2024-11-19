@@ -30,17 +30,18 @@ const ReportingDashboard = () => {
       {
         label: "Online Consultation",
         data: [10, 20, 30, 40, 30, 50],
-        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        backgroundColor: "#1E97E6",
+        barThickness: 10,
       },
       {
         label: "Other Appointment",
         data: [20, 30, 25, 35, 50, 40],
-        backgroundColor: "rgba(153, 102, 255, 0.6)",
+        backgroundColor: "#3FD9FF",
+        barThickness: 10,
       },
     ],
   };
 
-  // Data for Patients Summary Chart
   const patientsSummaryData = {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [
@@ -65,7 +66,7 @@ const ReportingDashboard = () => {
       <Sidebar />
       <div className="flex flex-col flex-grow">
         <Header />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 bg-gray-100 min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 bg-gray-100 overflow-x-auto">
           <div className="col-span-1 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <div className="bg-white shadow-md p-4 rounded-md text-center">
               <h2 className="text-xl font-semibold">Total Patients</h2>
@@ -87,7 +88,7 @@ const ReportingDashboard = () => {
 
           <div className="bg-white shadow-md p-4 rounded-md col-span-1 lg:col-span-2">
             <h2 className="text-xl font-semibold mb-4">Appointments</h2>
-            <Bar data={appointmentsData} options={{ responsive: true }} />
+            <Bar  data={appointmentsData} options={{ responsive: true }} />
           </div>
 
           <div className="bg-white shadow-md p-4 rounded-md col-span-1 lg:col-span-1">

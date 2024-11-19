@@ -22,10 +22,10 @@ const PatientSidebar = ({ isSidebarOpen, toggleSidebar }) => {
   };
 
   return (
+    
     <div
-      className={`fixed top-0 left-0 h-full bg-white shadow-lg p-4 z-50 transition-transform duration-300 ${
-        isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-      } md:translate-x-0 md:relative md:shadow-none md:h-auto`}
+      className={` flex justify-between flex-col fixed top-0 left-0 h-full bg-white shadow-lg p-4 z-50 transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0 md:relative md:shadow-none md:h-auto`}
     >
       {/* Close Button - Only visible on small screens */}
       <button
@@ -35,115 +35,114 @@ const PatientSidebar = ({ isSidebarOpen, toggleSidebar }) => {
         <FaTimes size={24} />
       </button>
 
-      <div>
+    
         <div className="flex justify-center items-center mb-8">
           <img src={Logo} alt="Hospital Logo" className="max-w-[200px] w-100" />
         </div>
+        
 
-        {/* Navigation */}
-        <nav className="flex-1">
-          <ul className="space-y-4">
-            <li>
-              <NavLink
-                to="/personalhealthrecord/patientdetaildashboard"
-                className={({ isActive }) =>
-                  `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${
-                    isActive
+        <div className="flex-1">
+          {/* Navigation */}
+          <nav className="flex-1">
+            <ul className="space-y-4">
+              <li>
+                <NavLink
+                  to="/personalhealthrecord/patientdetaildashboard"
+                  className={({ isActive }) =>
+                    `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${isActive
                       ? "bg-gradient-to-r from-[#0EABEB] to-transparent text-[#0EABEB]"
                       : "text-gray hover:text-[#0EABEB] hover:bg-[#b6dceb]"
-                  }`
-                }
-              >
-                <FaClipboardList />
-                <span style={{ fontSize: "16px", fontWeight: "600" }}>
-                  Personal Health Record
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/appointmentbooking/patientmyappointment"
-                className={({ isActive }) =>
-                  `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${
-                    isActive
+                    }`
+                  }
+                >
+                  <FaClipboardList />
+                  <span style={{ fontSize: "16px", fontWeight: "600" }}>
+                    Personal Health Record
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/appointmentbooking/patientmyappointment"
+                  className={({ isActive }) =>
+                    `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${isActive
                       ? "bg-gradient-to-r from-[#0EABEB] to-transparent text-[#0EABEB]"
                       : "text-gray hover:text-[#0EABEB] hover:bg-[#b6dceb]"
-                  }`
-                }
-              >
-                <FaCalendarCheck />
-                <span style={{ fontSize: "16px", fontWeight: "600" }}>
-                  Appointment Booking
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                               to="/prescriptionaccess/patientprescriptionaccess"
+                    }`
+                  }
+                >
+                  <FaCalendarCheck />
+                  <span style={{ fontSize: "16px", fontWeight: "600" }}>
+                    Appointment Booking
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/prescriptionaccess/patientprescriptionaccess"
 
-                className={({ isActive }) =>
-                  `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${
-                    isActive
+                  className={({ isActive }) =>
+                    `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${isActive
                       ? "bg-gradient-to-r from-[#0EABEB] to-transparent text-[#0EABEB]"
                       : "text-gray hover:text-[#0EABEB] hover:bg-[#b6dceb]"
-                  }`
-                }
-              >
-                <FaPrescriptionBottleAlt />
-                <span style={{ fontSize: "16px", fontWeight: "600" }}>
-                  Prescription Access
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/teleconsultationaccess"
-                className={({ isActive }) =>
-                  `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${
-                    isActive
+                    }`
+                  }
+                >
+                  <FaPrescriptionBottleAlt />
+                  <span style={{ fontSize: "16px", fontWeight: "600" }}>
+                    Prescription Access
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/teleconsultationaccess"
+                  className={({ isActive }) =>
+                    `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${isActive
                       ? "bg-gradient-to-r from-[#0EABEB] to-transparent text-[#0EABEB]"
                       : "text-gray hover:text-[#0EABEB] hover:bg-[#b6dceb]"
-                  }`
-                }
-              >
-                <FaVideo />
-                <span style={{ fontSize: "16px", fontWeight: "600" }}>
-                  Teleconsultation Access
-                </span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/bills"
-                className={({ isActive }) =>
-                  `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${
-                    isActive
+                    }`
+                  }
+                >
+                  <FaVideo />
+                  <span style={{ fontSize: "16px", fontWeight: "600" }}>
+                    Teleconsultation Access
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/bills"
+                  className={({ isActive }) =>
+                    `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${isActive
                       ? "bg-gradient-to-r from-[#0EABEB] to-transparent text-[#0EABEB]"
                       : "text-gray hover:text-[#0EABEB] hover:bg-[#b6dceb]"
-                  }`
-                }
-              >
-                <FaComments />
-                <span style={{ fontSize: "16px", fontWeight: "600" }}>
-                  Bills
-                </span>
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+                    }`
+                  }
+                >
+                  <FaComments />
+                  <span style={{ fontSize: "16px", fontWeight: "600" }}>
+                    Bills
+                  </span>
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        {/* Logout Button */}
+        <div className="mt-4">
+          <button
+            onClick={handleLogout}
+            className="w-full flex items-center justify-center bg-liteRed text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors duration-300"
+          >
+            <FaSignOutAlt className="mr-2" />
+            Logout
+          </button>
+        </div>
       </div>
 
-      {/* Logout Button */}
-      <div className="mt-4">
-        <button
-          onClick={handleLogout}
-          className="w-full flex items-center justify-center bg-liteRed text-white py-2 px-4 rounded-md hover:bg-red-700 transition-colors duration-300"
-        >
-          <FaSignOutAlt className="mr-2" />
-          Logout
-        </button>
-      </div>
-    </div>
+
   );
 };
 
