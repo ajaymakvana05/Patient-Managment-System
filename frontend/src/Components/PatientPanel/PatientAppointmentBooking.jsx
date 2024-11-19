@@ -22,56 +22,11 @@ const PatientAppointmentBooking = () => {
   const [appointmentDate, setAppointmentDate] = useState("");
   const [currentDate, setCurrentDate] = useState(moment()); 
   const [countries, setCountries] = useState([]);
-  const [states, setStates] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [selectedState, setSelectedState] = useState("");
-  const [selectedCity, setSelectedCity] = useState("");
-
-
-  const getStates = async () => {
-    // Example API call to fetch states (this can be replaced with actual API URL)
-    const response = await fetch("https://api.example.com/states");
-    const data = await response.json();
-    return data.states;  // Assuming the API returns an array of states
-  };
-  
-  const getCitiesByState = async (state) => {
-    // Example API call to fetch cities based on selected state (replace with actual API URL)
-    const response = await fetch(`https://api.example.com/cities?state=${state}`);
-    const data = await response.json();
-    return data.cities;  // Assuming the API returns an array of cities
-  };
-  
-  useEffect(() => {
-    // Fetch states when component mounts
-    const fetchStates = async () => {
-      const fetchedStates = await getStates();
-      setStates(fetchedStates);
-    };
-
-    fetchStates();
-  }, []);
-
-  // Fetch cities when the selected state changes
-  useEffect(() => {
-    if (selectedState) {
-      const fetchCities = async () => {
-        const fetchedCities = await getCitiesByState(selectedState);
-        setCities(fetchedCities);
-      };
-
-      fetchCities();
-    }
-  }, [selectedState]);
-
-  
 
 
 
 
   const navigate = useNavigate();
-
- 
 
 
   const getWeekDays = () => {
@@ -118,7 +73,6 @@ const PatientAppointmentBooking = () => {
       available: ["No Schedule", "Available", "No Schedule", "Available", "No Schedule", "No Schedule", "Not Available"],
     },
   ];
-  // Handle previous and next week navigation
   const handlePrevious = () => setCurrentDate(currentDate.clone().subtract(1, "week"));
   const handleNext = () => setCurrentDate(currentDate.clone().add(1, "week"));
 
@@ -189,31 +143,14 @@ const PatientAppointmentBooking = () => {
         </option>
       ))}
     </select>
-    <select
-        className="border border-gray-300 rounded p-2"
-        value={selectedState}
-        onChange={(e) => setSelectedState(e.target.value)}
-      >
-        <option value="">Select State</option>
-        {states.map((state) => (
-          <option key={state.id} value={state.name}>
-            {state.name}
-          </option>
-        ))}
-      </select>
-
-      <select
-        className="border border-gray-300 rounded p-2"
-        value={selectedCity}
-        onChange={(e) => setSelectedCity(e.target.value)}
-      >
-        <option value="">Select City</option>
-        {cities.map((city) => (
-          <option key={city.id} value={city.name}>
-            {city.name}
-          </option>
-        ))}
-      </select>
+          <select className="border border-gray-300 rounded p-2">
+            <option>State</option>
+            <option>Gujarat</option>
+          </select>
+          <select className="border border-gray-300 rounded p-2">
+            <option>City</option>
+            <option>Nagpur</option>
+          </select>
           <select
             className="border border-gray-300 rounded p-2"
             value={selectedHospital}
