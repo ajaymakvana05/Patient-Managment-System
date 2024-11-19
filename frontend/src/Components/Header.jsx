@@ -30,12 +30,15 @@ const Header = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <header className="w-full bg-blue text-white p-4 flex justify-between items-center">
+    <header className="w-full text-white p-4 flex justify-between items-center">
      
-
-      <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
-        Profile Setting
+  <div>
+      <h1 className="text-lg sm:text-xl text-black md:text-2xl font-bold">
+          Good Morning ! Martin
       </h1>
+      <p className="text-greyDark">Hope you have a good day</p>
+
+  </div>
 
       <div className="flex items-center space-x-4">
         <div className="hidden md:block">

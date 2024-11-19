@@ -82,6 +82,8 @@ import PatientAppointmentBookingInvoice from "./Components/PatientPanel/PatientA
 import PatientPrescriptionAccess from "./Components/PatientPanel/PatientPrescriptionAccess.jsx";
 import PrescriptionAccess from "./pages/patient/PrescriptionAccess.jsx";
 import PatientPrescriptionInvoice from "./Components/PatientPanel/PatientPrescriptionInvoice.jsx";
+import TeleconsultationAccess from "./pages/patient/TeleconsultationAccess.jsx";
+import PatientAppointmentTele from "./Components/PatientPanel/PatientAppointmentTele.jsx";
 // import PatientPrescriptionInvoice from "./Components/PatientPanel/PatientPrescriptionInvoice.jsx";
 
 
@@ -651,6 +653,26 @@ const App = () => {
                 }
               />
            
+            </Route>
+
+            <Route
+              path="/teleconsultationaccess"
+              element={
+                <PatientProtect>
+                  <TeleconsultationAccess />
+                </PatientProtect>
+              }
+            >
+            <Route
+             index
+              path="patientappointmentele"
+              element={
+                <PatientProtect>
+                  <PatientAppointmentTele />
+                </PatientProtect>
+              }
+            />
+
             </Route>
             
           </Routes>

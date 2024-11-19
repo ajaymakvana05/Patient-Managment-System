@@ -11,7 +11,7 @@ const appointments = [
     doctorName: "Dr. Marcus Philips",
     diseaseName: "Influenza",
     appointmentTime: "10:00 AM",
-    appointmentType: "In-person",
+    appointmentType: "onsite",
     date: new Date(),
     patientDetails: {
       age: 32,
@@ -80,11 +80,10 @@ const PatientsManagementTable = () => {
         {["today", "upcoming", "previous", "cancel"].map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2 text-sm font-medium ${
-              activeTab === tab
+            className={`px-4 py-2 text-sm font-medium ${activeTab === tab
                 ? "border-b-2 border-blue text-blue"
                 : "text-gray-500"
-            }`}
+              }`}
             onClick={() => setActiveTab(tab)}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)} Appointment
@@ -106,12 +105,12 @@ const PatientsManagementTable = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <button
+        {/* <button
           className="bg-blue text-white px-4 py-2 rounded hover:bg-blue"
           onClick={() => navigate("/addappointmentform")}
         >
           Add New Appointment
-        </button>
+        </button> */}
       </div>
 
       {/* Table */}
@@ -153,7 +152,14 @@ const PatientsManagementTable = () => {
                       {appointment.appointmentTime}
                     </span>
                   </td>
-                  <td className="p-3">{appointment.appointmentType}</td>
+                  <td className="p-3">
+                    <span className={`p-3  
+                            ${appointment.appointmentType === 'online' ? 'bg-[#FFC3131A] text-[#FFC313] py-1 px-3 rounded-full shadow-sm' : ''} 
+                            ${appointment.appointmentType === 'onsite' ? 'bg-[#5678E91A] text-[#5678E9] py-1 px-3 rounded-full shadow-sm' : ''}`}>
+                                   {appointment.appointmentType}
+
+                    </span>
+                  </td>
                   <td className="p-3 text-center flex justify-center">
                     <button
                       className="text-blue hover:text-blue"
@@ -172,18 +178,20 @@ const PatientsManagementTable = () => {
       {/* Modal */}
       {showModal && selectedPatient && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white rounded-lg p-8 w-96 shadow-lg relative">
-            <div className="flex justify-between">
-              <h2 className="text-xl font-bold mb-4">Patient Details</h2>
-              <button
-                className="absolute right-4 text-red hover:text-red"
-                onClick={handleCloseModal}
-              >
-                &#10005;
-              </button>
-            </div>
+          <div className="bg-white rounded-lg p-6 w-96 shadow-lg relative">
+          <div className="flex justify-between border-b border-gray-300 pb-2">
+  <h2 className="text-xl font-bold mb-4">Patient Details</h2>
+  <button
+    className="absolute right-4 bg-red text-white rounded-full  w-[25px] h-[25px]" 
+    onClick={handleCloseModal}
+  >
+    &#10005;
+  </button>
+</div>
 
-            <p>
+
+         <div className="mt-2">
+         <p>
               <strong>Name:</strong> {selectedPatient.patientName}
             </p>
             <p>
@@ -213,12 +221,8 @@ const PatientsManagementTable = () => {
             <p>
               <strong>Address:</strong> {selectedPatient.patientDetails.address}
             </p>
-            <button
-              className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-              onClick={handleCloseModal}
-            >
-              Close
-            </button>
+          
+         </div>
           </div>
         </div>
       )}
