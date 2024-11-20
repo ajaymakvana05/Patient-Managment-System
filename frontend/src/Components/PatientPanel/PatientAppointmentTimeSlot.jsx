@@ -43,7 +43,7 @@ const PatientAppointmentTimeSlot = () => {
     <div className="p-4 ">
       <h1 className="text-2xl font-semibold mb-4">Appointment Time Slot</h1>
       <div className="bg-white rounded-lg shadow-md p-4">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-center items-center mb-4">
           <button className="text-blue">&lt;</button>
           <span className="text-blue font-semibold">
             18 June, 2022 - 23 June, 2022

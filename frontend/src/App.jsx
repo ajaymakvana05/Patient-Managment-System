@@ -84,7 +84,7 @@ import PrescriptionAccess from "./pages/patient/PrescriptionAccess.jsx";
 import PatientPrescriptionInvoice from "./Components/PatientPanel/PatientPrescriptionInvoice.jsx";
 import TeleconsultationAccess from "./pages/patient/TeleconsultationAccess.jsx";
 import PatientAppointmentTele from "./Components/PatientPanel/PatientAppointmentTele.jsx";
-// import PatientPrescriptionInvoice from "./Components/PatientPanel/PatientPrescriptionInvoice.jsx";
+import PatientAppointmentSlot from "./Components/PatientPanel/PatientAppointmentSlot.jsx";
 
 
 const App = () => {
@@ -672,6 +672,17 @@ const App = () => {
                 </PatientProtect>
               }
             />
+            <Route
+             index
+              path="patientappointmentslot"
+              element={
+                <PatientProtect>
+                  <PatientAppointmentSlot />
+                </PatientProtect>
+              }
+            />
+           
+            
 
             </Route>
             

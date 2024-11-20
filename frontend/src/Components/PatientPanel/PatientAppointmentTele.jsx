@@ -118,19 +118,25 @@ const PatientAppointmentTele = () => {
             <div key={index} className="bg-white shadow-md rounded-lg p-4">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-bold">Dr. {appointment.doctor}</h3>
-                <button
-                  onClick={() => handleViewClick(appointment)}
-                  className="text-sm text-gray-500 flex items-center"
-                >
-                  <AiFillEye className="mr-1" />
-                </button>
-              </div>
-              {/* Popup Modal */}
-              {showPopup && selectedAppointment && (
-                <div className="fixed inset-0 backdrop-blur-lg bg-opacity-50 flex items-center justify-end z-50">
-                  <PatientDoctorManagementPopUp closePopup={closePopup} />
+
+                <div className="flex items-center space-x-4">
+                  {/* View Details Button */}
+                  <button
+                    onClick={() => handleViewClick(appointment)}
+                    className="text-sm text-gray-500 flex items-center"
+                  >
+                    <AiFillEye className="mr-1" />
+                  </button>
+
+                  {/* Calendar Icon Button */}
+                  <button
+                    onClick={() => navigate("/teleconsultationaccess/patientappointmentslot")}
+                    className="text-sm text-gray-500 flex items-center"
+                  >
+                    <AiFillCalendar className="mr-1" />
+                  </button>
                 </div>
-              )}
+              </div>
               <div className="flex justify-between">
                 <p className="text-sm text-gray-500">Appointment Type</p>
                 <p className="text-sm text-yellow-500">
@@ -139,42 +145,52 @@ const PatientAppointmentTele = () => {
               </div>
               <div className="flex justify-between">
                 <p className="text-sm text-gray-500">Hospital Name</p>
-                <p className="text-sm text-gray-700">{appointment.hospital}</p>
+                <p className="text-sm  text-greyDark font-bold	">
+                  {appointment.hospital}
+                </p>
               </div>
               <div className="flex justify-between">
                 <p className="text-sm text-gray-500">Appointment Date</p>
-                <p className="text-sm text-gray-700">{appointment.date}</p>
+                <p className="text-sm  text-greyDark font-bold	">
+                  {appointment.date}
+                </p>
               </div>
               <div className="flex justify-between">
                 <p className="text-sm text-gray-500">Appointment Time</p>
-                <p className="text-sm text-gray-700">{appointment.time}</p>
+                <p className="text-sm  text-greyDark font-bold	">
+                  {appointment.time}
+                </p>
               </div>
               <div className="flex justify-between">
                 <p className="text-sm text-gray-500">Patient Issue</p>
-                <p className="text-sm text-gray-700">{appointment.issue}</p>
+                <p className="text-sm  text-greyDark font-bold	">
+                  {appointment.issue}
+                </p>
               </div>
-              {appointment.reason && (
+              {/* {appointment.reason && (
                 <>
                   <p className="text-sm text-gray-500">Cancellation Reason</p>
-                  <p className="text-sm text-gray-700">{appointment.reason}</p>
+                  <p className="text-sm  text-greyDark font-bold	">
+                    {appointment.reason}
+                  </p>
                 </>
-              )}
+              )} */}
               <div className="flex justify-between mt-4">
                 <button
                   onClick={opencancelPopup}
-                  className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md"
+                  className="bg-gray-200  text-greyDark font-bold	 px-4 py-2 rounded-md"
                 >
                   Cancel
                 </button>
-
                 <button
                   onClick={() =>
-                    navigate("/appointmentbooking/patientappointmenttimelot")
+                    navigate("/teleconsultationaccess/patientreminderpopup")
                   }
-                  className=" bg-white text-gray  px-4 py-2 rounded-md "
+                  className="bg-white text-gray-600 px-4 py-2 rounded-md border border-gray-300 hover:bg-green hover:text-white active:bg-green active:border-green transition duration-200"
                 >
                   Join Call
                 </button>
+
                 {iscancelOpen && (
                   <div className="fixed inset-0 flex items-center justify-center backdrop-blur-lg bg-opacity-50 z-50">
                     <div className="bg-white rounded-lg shadow-lg p-6 w-80">
@@ -196,7 +212,7 @@ const PatientAppointmentTele = () => {
                               "/personalhealthrecord/patientdetaildashboard"
                             )
                           }
-                          className="bg-white border border-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg w-1/2 mr-2 "
+                          className="bg-white border border-gray-300  text-greyDark font-bold	 font-semibold py-2 px-4 rounded-lg w-1/2 mr-2 "
                         >
                           No
                         </button>
@@ -213,6 +229,48 @@ const PatientAppointmentTele = () => {
         </div>
       );
     };
+
+     {/*Scheduled Appointment Popup Modal */}
+     {showPopup && selectedAppointment && (
+        <div className="fixed inset-0 backdrop-blur-lg bg-opacity-50 flex items-center justify-center z-50 w-100">
+              <div className="flex items-center justify-center min-h-screen  w-full">
+            <div className="bg-white rounded-lg shadow-lg p-6 w-96">
+                <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-xl font-bold text-indigo-900">Scheduled Appointment</h2>
+                    <button className="text-red"  onClick={closePopup}>
+                    <FaTimes className="w-5 h-5" />
+                    </button>
+                </div>
+                <div className="space-y-2">
+                    <div className="flex justify-between">
+                        <span className="text-gray-600">Appointment Type</span>
+                        <span className="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full"> {appointment.appointmentType}</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-gray-600">Appointment Date</span>
+                        <span className="text-gray-800">  {appointment.date}</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-gray-600">Appointment Time</span>
+                        <span className="text-gray-800">{appointment.time}</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-gray-600">Hospital Name</span>
+                        <span className="text-gray-800">{appointment.hospital}</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-gray-600">Patient Issue</span>
+                        <span className="text-gray-800">{appointment.issue}</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-gray-600">Doctor Name</span>
+                        <span className="text-gray-800">Dr. Mathew Best</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      )}
 
     // Render content based on the selected tab
     switch (activeTab) {
@@ -259,7 +317,7 @@ const PatientAppointmentTele = () => {
               onClick={togglePopup}
             >
               <FaCalendarAlt className="text-gray-500" />
-              <span className="ml-2 text-gray-700 text-xs sm:text-sm">
+              <span className="ml-2  text-greyDark font-bold	 text-xs sm:text-sm">
                 {fromDate ? fromDate.toDateString() : "From Date"} -{" "}
                 {toDate ? toDate.toDateString() : "To Date"}
               </span>
@@ -280,7 +338,7 @@ const PatientAppointmentTele = () => {
                   </div>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-sm   text-greyDark font-bold	 mb-1">
                         From Date
                       </label>
                       <div className="relative">
@@ -288,7 +346,7 @@ const PatientAppointmentTele = () => {
                           selected={fromDate}
                           onChange={(date) => setFromDate(date)}
                           placeholderText="Select Date"
-                          className="w-full border rounded-lg py-2 pl-3 pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                          className="w-full border rounded-lg py-2 pl-3 pr-10  text-greyDark font-bold	 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                         />
                         <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                           <FaCalendarAlt className="text-gray-400" />
@@ -296,7 +354,7 @@ const PatientAppointmentTele = () => {
                       </div>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                      <label className="block text-sm   text-greyDark font-bold	 mb-1">
                         To Date
                       </label>
                       <div className="relative">
@@ -304,7 +362,7 @@ const PatientAppointmentTele = () => {
                           selected={toDate}
                           onChange={(date) => setToDate(date)}
                           placeholderText="Select Date"
-                          className="w-full border rounded-lg py-2 pl-3 pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                          className="w-full border rounded-lg py-2 pl-3 pr-10  text-greyDark font-bold	 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                         />
                         <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                           <FaCalendarAlt className="text-gray-400" />
@@ -315,13 +373,13 @@ const PatientAppointmentTele = () => {
                   <div className="flex justify-between">
                     <button
                       onClick={resetDates}
-                      className="w-1/2 bg-gray-100 text-gray-700 py-2 rounded-lg mr-2"
+                      className="w-1/2 bg-gray-100  text-greyDark font-bold	 py-2 rounded-lg mr-2"
                     >
                       Reset
                     </button>
                     <button
                       onClick={togglePopup}
-                      className="w-1/2 bg-indigo-100 text-gray-700 py-2 rounded-lg ml-2"
+                      className="w-1/2 bg-indigo-100  text-greyDark font-bold	 py-2 rounded-lg ml-2"
                     >
                       Apply
                     </button>
