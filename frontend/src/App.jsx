@@ -85,6 +85,11 @@ import PatientPrescriptionInvoice from "./Components/PatientPanel/PatientPrescri
 import TeleconsultationAccess from "./pages/patient/TeleconsultationAccess.jsx";
 import PatientAppointmentTele from "./Components/PatientPanel/PatientAppointmentTele.jsx";
 import PatientAppointmentSlot from "./Components/PatientPanel/PatientAppointmentSlot.jsx";
+import Chat from "./pages/patient/Chat.jsx";
+import PatientChatApp from "./Components/PatientPanel/PatientChatApp.jsx";
+import Bills from "./pages/patient/Bills.jsx";
+import PatientUnpaidBills from "./Components/PatientPanel/PatientUnpaidBills.jsx";
+import PatientUnpaidBillsInvoice from "./Components/PatientPanel/PatientUnpaidBillsinvoice.jsx";
 
 
 const App = () => {
@@ -683,6 +688,53 @@ const App = () => {
             />
            
             
+
+            </Route>
+
+            <Route
+              path="/chat"
+              element={
+                <PatientProtect>
+                  <Chat/>
+                </PatientProtect>
+              }
+            > 
+                 <Route
+              path="patientchatapp"
+              element={
+                <PatientProtect>
+                  <PatientChatApp/>
+                </PatientProtect>
+              }
+            />            
+             </Route>
+
+             <Route
+              path="/bills"
+              element={
+                <PatientProtect>
+                  <Bills/>
+                </PatientProtect>
+              }
+            >
+             <Route
+             index
+              path="patientunpaidbills"
+              element={
+                <PatientProtect>
+                  <PatientUnpaidBills/>
+                </PatientProtect>
+              }
+            />
+             <Route
+             index
+              path="patientunpaidbillsinvoice"
+              element={
+                <PatientProtect>
+                  <PatientUnpaidBillsInvoice/>
+                </PatientProtect>
+              }
+            />
 
             </Route>
             

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import viewIcon from "../../assets/images/view.svg";
 import status1 from "../../assets/images/status1.svg";
 import { Link, useNavigate } from "react-router-dom";
-import { FiEye } from 'react-icons/fi';
+import { FiEye } from "react-icons/fi";
 
 const PatientDetailDashboard = () => {
   const navigate = useNavigate();
@@ -88,15 +88,21 @@ const PatientDetailDashboard = () => {
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">Number</p>
-                <p className="font-normal text-lg	text-black">{formData.phonenumber}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.phonenumber}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">Email</p>
-                <p className="font-normal text-lg	text-black">{formData.email}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.email}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">Gender</p>
-                <p className="font-normal text-lg	text-black">{formData.gender}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.gender}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">DOB</p>
@@ -112,23 +118,33 @@ const PatientDetailDashboard = () => {
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">Blood Group</p>
-                <p className="font-normal text-lg	text-black">{formData.BloodGroup}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.BloodGroup}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">Height (cm)</p>
-                <p className="font-normal text-lg	text-black">{formData.height}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.height}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">Weight (Kg)</p>
-                <p className="font-normal text-lg	text-black">{formData.weight}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.weight}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">Country</p>
-                <p className="font-normal text-lg	text-black">{formData.country}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.country}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">State</p>
-                <p className="font-normal text-lg	text-black">{formData.state}</p>
+                <p className="font-normal text-lg	text-black">
+                  {formData.state}
+                </p>
               </div>
               <div className="font-lota text-[16px] md:text-[16px]">
                 <p className="text-grey text-xl	font-medium">City</p>
@@ -163,11 +179,17 @@ const PatientDetailDashboard = () => {
               {/* Individual Medical History Card */}
               <div className="bg-white rounded-lg shadow">
                 <div className="flex justify-between bg-greyLightest p-4 items-center">
-                  <h3 className="font-normal text-lg	text-black">Dulce Schleifer</h3>
-                  <p className="text-greyDark text-xs font-semibold">2 Jan, 2022</p>
+                  <h3 className="font-normal text-lg	text-black">
+                    Dulce Schleifer
+                  </h3>
+                  <p className="text-greyDark text-xs font-semibold">
+                    2 Jan, 2022
+                  </p>
                 </div>
                 <div className="p-4">
-                  <h4 className="mt-2 font-bold	 text-greyDark " >Patient Issue</h4>
+                  <h4 className="mt-2 font-bold	 text-greyDark ">
+                    Patient Issue
+                  </h4>
                   <p className="text-grey font-normal	 text-base	">
                     the printing and typesetting industry. Lorem Ipsum has been
                     the industry's standard dummy text ever since the 1500s,
@@ -178,11 +200,17 @@ const PatientDetailDashboard = () => {
 
               <div className="bg-white rounded-lg shadow">
                 <div className="flex justify-between bg-greyLightest p-4 items-center">
-                  <h3 className="font-normal text-lg	text-black">Dulce Workman</h3>
-                  <p className="text-greyDark text-xs font-semibold	">2 Jan, 2022</p>
+                  <h3 className="font-normal text-lg	text-black">
+                    Dulce Workman
+                  </h3>
+                  <p className="text-greyDark text-xs font-semibold	">
+                    2 Jan, 2022
+                  </p>
                 </div>
                 <div className="p-4">
-                  <h4 className="mt-2 font-bold	 text-greyDark">Patient Issue</h4>
+                  <h4 className="mt-2 font-bold	 text-greyDark">
+                    Patient Issue
+                  </h4>
                   <p className="text-grey font-normal	 text-base	">
                     the printing and typesetting industry. Lorem Ipsum has been
                     the industry's standard dummy text ever since the 1500s,
@@ -201,7 +229,9 @@ const PatientDetailDashboard = () => {
                   </p>
                 </div>
                 <div className="p-4">
-                  <h4 className="mt-2 font-bold	 text-greyDark">Patient Issue</h4>
+                  <h4 className="mt-2 font-bold	 text-greyDark">
+                    Patient Issue
+                  </h4>
                   <p className="text-grey font-normal	 text-base	">
                     the printing and typesetting industry. Lorem Ipsum has been
                     the industry's standard dummy text ever since the 1500s,
@@ -229,41 +259,73 @@ const PatientDetailDashboard = () => {
               <table className="min-w-full text-base	">
                 <thead>
                   <tr className="text-left ">
-                    <th className="pb-2 text-black text-xs font-semibold">Hospital Name</th>
-                    <th className="pb-2 text-black text-xs font-semibold">Date</th>
-                    <th className="pb-2 text-black text-xs font-semibold">Disease Name</th>
-                    <th className="pb-2 text-black text-xs font-semibold">Action</th>
+                    <th className="pb-2 text-black text-xs font-semibold">
+                      Hospital Name
+                    </th>
+                    <th className="pb-2 text-black text-xs font-semibold">
+                      Date
+                    </th>
+                    <th className="pb-2 text-black text-xs font-semibold">
+                      Disease Name
+                    </th>
+                    <th className="pb-2 text-black text-xs font-semibold">
+                      Action
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-t ">
-                    <td className="py-2  text-greyDark text-xs font-medium">Apollo Hospitals</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">2 Jan, 2022</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">Colds and Flu</td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Apollo Hospitals
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      2 Jan, 2022
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Colds and Flu
+                    </td>
                     <td className="py-2  text-greyDark text-xs font-medium">
                       <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
                   </tr>
                   <tr className="border-t">
-                    <td className="py-2  text-greyDark text-xs font-medium">Medanta The Medicity</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">2 Jan, 2022</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">Allergies</td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Medanta The Medicity
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      2 Jan, 2022
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Allergies
+                    </td>
                     <td className="py-2  text-greyDark text-xs font-medium">
                       <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
                   </tr>
                   <tr className="border-t">
-                    <td className="py-2  text-greyDark text-xs font-medium">Manipal Hospitals</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">2 Jan, 2022</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">Diarrhea</td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Manipal Hospitals
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      2 Jan, 2022
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Diarrhea
+                    </td>
                     <td className="py-2  text-greyDark text-xs font-medium">
                       <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
                   </tr>
                   <tr className="border-t">
-                    <td className="py-2  text-greyDark text-xs font-medium">Narayana Health</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">2 Jan, 2022</td>
-                    <td className="py-2  text-greyDark text-xs font-medium">Colds and Flu</td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Narayana Health
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      2 Jan, 2022
+                    </td>
+                    <td className="py-2  text-greyDark text-xs font-medium">
+                      Colds and Flu
+                    </td>
                     <td className="py-2  text-greyDark text-xs font-medium">
                       <img src={viewIcon} alt="View" className="h-4 w-4" />
                     </td>
@@ -331,26 +393,28 @@ const PatientDetailDashboard = () => {
                         <h3 className="font-medium text-lg		 md:text-base">
                           {report.name}
                         </h3>
-
                       </div>
                       <p className="text-xs md:text-base			 text-grey">
                         {report.date}
                       </p>
                       <p className="text-xs md:text-lg		 text-gray-700">
                         Dieses:{" "}
-                        <span className="text-base	text-greyBlue">{report.disease}</span>
+                        <span className="text-base	text-greyBlue">
+                          {report.disease}
+                        </span>
                       </p>
                     </div>
                   </div>
                   <div className=" items-center space-x-2">
                     <p>
-
-                      <FiEye className="text-blue inline-block ml-2" size={20} />
+                      <FiEye
+                        className="text-blue inline-block ml-2"
+                        size={20}
+                      />
                     </p>
                     <span className="text-green text-sm	font-medium		">
                       {report.test}
                     </span>
-
                   </div>
                 </div>
               ))}
@@ -360,10 +424,12 @@ const PatientDetailDashboard = () => {
             <h2 className="text-lg md:text-xl font-bold mb-4">
               Patient Status
             </h2>
-            <div className="grid grid-cols-2 sm:grid-flow-row1">
+            <div className="grid grid-cols-2 sm:grid-flow-row1 gap-4">
               <div className="flex items-center space-x-4">
                 <img src={status1} className="text-blue text-lg md:text-xl" />
-                <span className="text-base	 md:text-base">Shambula Hospital</span>
+                <span className="text-base	 md:text-base">
+                  Shambula Hospital
+                </span>
               </div>
               <div className="flex items-center space-x-4">
                 <img src={status1} className="text-blue text-lg md:text-xl" />

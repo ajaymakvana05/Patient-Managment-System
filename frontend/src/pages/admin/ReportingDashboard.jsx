@@ -32,6 +32,7 @@ const ReportingDashboard = () => {
         data: [10, 20, 30, 40, 30, 50],
         backgroundColor: "#1E97E6",
         barThickness: 10,
+        
       },
       {
         label: "Other Appointment",
@@ -88,12 +89,12 @@ const ReportingDashboard = () => {
 
           <div className="bg-white shadow-md p-4 rounded-md col-span-1 lg:col-span-2">
             <h2 className="text-xl font-semibold mb-4">Appointments</h2>
-            <Bar  data={appointmentsData} options={{ responsive: true }} />
+            <Bar  data={appointmentsData} options={{ responsive: true }} style={{height: "400px" ,width:"600px"}} />
           </div>
 
           <div className="bg-white shadow-md p-4 rounded-md col-span-1 lg:col-span-1">
             <h2 className="text-xl font-semibold mb-4">Patients Summary</h2>
-            <Line data={patientsSummaryData} options={{ responsive: true }} />
+            <Line data={patientsSummaryData} options={{ responsive: true }}  style={{height: "400px" ,width:"400px"}} />
           </div>
 
           <div className="bg-white shadow-md p-4 rounded-md col-span-1 lg:col-span-1">

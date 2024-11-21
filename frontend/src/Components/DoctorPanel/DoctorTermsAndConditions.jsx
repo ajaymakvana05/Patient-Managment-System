@@ -3,25 +3,21 @@ import React, { useState } from "react";
 const DoctorTermsAndConditions = () => {
   const [isAccepted, setIsAccepted] = useState(false);
 
-  // Handler for accepting terms
   const handleAccept = () => {
     if (isAccepted) {
       alert("Thank you for accepting the Terms & Conditions.");
-      // Here, you can add more functionality, such as navigation or API calls.
     } else {
       alert("Please accept the Terms & Conditions to proceed.");
     }
   };
 
-  // Handler for declining terms
   const handleDecline = () => {
     alert("You have declined the Terms & Conditions.");
-    // Add custom logic for decline action.
   };
 
   return (
     <div className="flex items-center justify-center ">
-      <div className="bg-white p-8 w-full max-w-2xl">
+      <div className="bg-white w-full max-w-2xl">
         {/* Header */}
         <h2 className="text-3xl font-bold text-gray-800 mb-4">
           Terms & Conditions
@@ -58,7 +54,7 @@ const DoctorTermsAndConditions = () => {
           <input
             id="accept-terms"
             type="checkbox"
-            className="w-5 h-5 text-blue focus:ring-blue-500 border-gray-300 rounded"
+            className="w-5 h-5 text-blue focus:ring-blue border-gray-300 rounded"
             onChange={() => setIsAccepted(!isAccepted)}
           />
           <label htmlFor="accept-terms" className="ml-2 text-gray-700">

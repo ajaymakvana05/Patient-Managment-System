@@ -112,7 +112,23 @@ const PatientSidebar = ({ isSidebarOpen, toggleSidebar }) => {
               </li>
               <li>
                 <NavLink
-                  to="/bills"
+                  to="/Chat/patientchatapp"
+                  className={({ isActive }) =>
+                    `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${isActive
+                      ? "bg-gradient-to-r from-[#0EABEB] to-transparent text-[#0EABEB]"
+                      : "text-gray hover:text-[#0EABEB] hover:bg-[#b6dceb]"
+                    }`
+                  }
+                >
+                  <FaComments />
+                  <span style={{ fontSize: "16px", fontWeight: "600" }}>
+                  Chat
+                  </span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/bills/patientunpaidbills"
                   className={({ isActive }) =>
                     `flex fs-[16px] items-center space-x-2 px-4 py-2 rounded-md transition-colors duration-300 ${isActive
                       ? "bg-gradient-to-r from-[#0EABEB] to-transparent text-[#0EABEB]"

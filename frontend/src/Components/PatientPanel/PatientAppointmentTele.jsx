@@ -212,7 +212,7 @@ const PatientAppointmentTele = () => {
                               "/personalhealthrecord/patientdetaildashboard"
                             )
                           }
-                          className="bg-white border border-gray-300  text-greyDark font-bold	 font-semibold py-2 px-4 rounded-lg w-1/2 mr-2 "
+                          className="bg-white border border-gray-300  text-greyDark  font-semibold py-2 px-4 rounded-lg w-1/2 mr-2 "
                         >
                           No
                         </button>

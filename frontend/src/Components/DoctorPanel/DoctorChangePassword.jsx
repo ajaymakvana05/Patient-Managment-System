@@ -52,7 +52,7 @@ const DoctorChangePassword = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="w-full max-w-3xl p-8 rounded-lg">
+      <div className="w-full max-w-3xl  rounded-lg">
         <h1 className="text-2xl font-bold mb-4">Change Password</h1>
         <p className="text-sm">
           To change your password, please fill in the fields below. Your

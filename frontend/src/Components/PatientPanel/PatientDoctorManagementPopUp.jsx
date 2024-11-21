@@ -3,13 +3,13 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const PatientDoctorManagementPopUp = ({ closePopup }) => {
   return (
-    <div className="flex justify-center bg-white items-center min-h-screen max-w-2xl p-4">
-      <div className="w-full max-w-3xl  rounded-lg shadow-lg p-6">
+    <div className="flex justify-center bg-white min-h-screen max-w-2xl p-4">
+      <div className="w-full max-w-3xl  ">
         <div className="flex items-center mb-4 justify-between">
           <h1 className="text-xl font-semibold ">Doctor Management</h1>
           <button
             onClick={closePopup}
-            className=" text-gray-500 hover:text-gray"
+            className=" text-red hover:text-gray"
           >
             <AiOutlineClose size={20} />
           </button>
